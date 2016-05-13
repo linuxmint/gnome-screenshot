@@ -710,7 +710,7 @@ screenshot_get_pixbuf (GdkRectangle *rectangle)
                                      filename);
     }
 
-  if (in_desktop ("Unity"))
+  if (!(in_desktop ("GNOME")))
       screenshot = screenshot_fallback_get_pixbuf(rectangle);
   else {
   connection = g_application_get_dbus_connection (g_application_get_default ());
