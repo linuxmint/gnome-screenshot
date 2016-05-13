@@ -740,15 +740,6 @@ action_quit (GSimpleAction *action,
 }
 
 static void
-action_help (GSimpleAction *action,
-             GVariant *parameter,
-             gpointer user_data)
-{
-  GList *windows = gtk_application_get_windows (GTK_APPLICATION (user_data));
-  screenshot_display_help (g_list_nth_data (windows, 0));
-}
-
-static void
 action_about (GSimpleAction *action,
               GVariant *parameter,
               gpointer user_data)
@@ -815,7 +806,6 @@ action_window_shot (GSimpleAction *action,
 
 static GActionEntry action_entries[] = {
   { "about", action_about, NULL, NULL, NULL },
-  { "help", action_help, NULL, NULL, NULL },
   { "quit", action_quit, NULL, NULL, NULL },
   { "screen-shot", action_screen_shot, NULL, NULL, NULL },
   { "window-shot", action_window_shot, NULL, NULL, NULL }

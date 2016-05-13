@@ -126,12 +126,6 @@ interactive_dialog_key_press_cb (GtkWidget *widget,
                                  GdkEventKey *event,
                                  gpointer user_data)
 {
-  if (event->keyval == GDK_KEY_F1)
-    {
-      screenshot_display_help (GTK_WINDOW (widget));
-      return TRUE;
-    }
-
   if (event->keyval == GDK_KEY_Escape)
     {
       gtk_widget_destroy (widget);
@@ -477,14 +471,6 @@ screenshot_interactive_dialog_new (CaptureClickedCallback f, gpointer user_data)
   g_object_get (settings,
                 "gtk-shell-shows-app-menu", &shows_app_menu,
                 NULL);
-  if (!shows_app_menu)
-    {
-      button = gtk_button_new_with_mnemonic (_("_Help"));
-      g_signal_connect_swapped (button, "clicked", G_CALLBACK (screenshot_display_help), dialog);
-      gtk_container_add (GTK_CONTAINER (button_box),
-                         button);
-      gtk_button_box_set_child_secondary (GTK_BUTTON_BOX (button_box), button, TRUE);
-    }
 
   size_group = gtk_size_group_new (GTK_SIZE_GROUP_HORIZONTAL);
 

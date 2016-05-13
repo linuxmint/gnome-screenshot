@@ -34,7 +34,6 @@ gint       screenshot_show_dialog   (GtkWindow   *parent,
                                      const gchar *detail);
 void       screenshot_play_sound_effect (const gchar *event_id,
                                          const gchar *event_desc);
-void       screenshot_display_help        (GtkWindow *parent);
 
 G_END_DECLS
 
