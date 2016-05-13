@@ -814,8 +814,6 @@ static GActionEntry action_entries[] = {
 static void
 screenshot_application_startup (GApplication *app)
 {
-  GMenuModel *menu;
-  GtkBuilder *builder;
   ScreenshotApplication *self = SCREENSHOT_APPLICATION (app);
 
   G_APPLICATION_CLASS (screenshot_application_parent_class)->startup (app);
@@ -826,14 +824,6 @@ screenshot_application_startup (GApplication *app)
 
   g_action_map_add_action_entries (G_ACTION_MAP (self), action_entries,
                                    G_N_ELEMENTS (action_entries), self);
-
-  builder = gtk_builder_new ();
-  gtk_builder_add_from_resource (builder, "/org/gnome/screenshot/screenshot-app-menu.ui", NULL);
-  menu = G_MENU_MODEL (gtk_builder_get_object (builder, "app-menu"));
-  gtk_application_set_app_menu (GTK_APPLICATION (app), menu);
-
-  g_object_unref (builder);
-  g_object_unref (menu);
 }
 
 static void
