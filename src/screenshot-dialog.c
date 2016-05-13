@@ -221,31 +221,30 @@ screenshot_dialog_new (GdkPixbuf              *screenshot,
   g_assert (res != 0);
 
   dialog->dialog = GTK_WIDGET (gtk_builder_get_object (ui, "toplevel"));
-  if (in_desktop ("Unity"))
-    {
-      GtkWidget *grid, *button_box;
 
-      gtk_window_set_titlebar (GTK_WINDOW (dialog->dialog), NULL);
+  GtkWidget *grid, *button_box;
 
-      grid = GTK_WIDGET (gtk_builder_get_object (ui, "grid1"));
-      button_box = gtk_button_box_new (GTK_ORIENTATION_HORIZONTAL);
-      gtk_widget_show (button_box);
-      gtk_grid_attach (GTK_GRID (grid), button_box, 0, 2, 3, 1);
+  gtk_window_set_titlebar (GTK_WINDOW (dialog->dialog), NULL);
 
-      dialog->copy_button = gtk_button_new_with_mnemonic (_("C_opy to Clipboard"));
-      gtk_widget_show (dialog->copy_button);
-      gtk_container_add (GTK_CONTAINER (button_box), dialog->copy_button);
+  grid = GTK_WIDGET (gtk_builder_get_object (ui, "grid1"));
+  button_box = gtk_button_box_new (GTK_ORIENTATION_HORIZONTAL);
+  gtk_widget_show (button_box);
+  gtk_grid_attach (GTK_GRID (grid), button_box, 0, 2, 3, 1);
 
-      dialog->save_button = gtk_widget_new (GTK_TYPE_BUTTON,
-              "label", _("_Save"),
-              "use-underline", TRUE,
-              "can-default", TRUE,
-              NULL);
-      gtk_window_set_default (GTK_WINDOW (dialog->dialog), dialog->save_button);
+  dialog->copy_button = gtk_button_new_with_mnemonic (_("C_opy to Clipboard"));
+  gtk_widget_show (dialog->copy_button);
+  gtk_container_add (GTK_CONTAINER (button_box), dialog->copy_button);
 
-      gtk_widget_show (dialog->save_button);
-      gtk_container_add (GTK_CONTAINER (button_box), dialog->save_button);
-    }
+  dialog->save_button = gtk_widget_new (GTK_TYPE_BUTTON,
+          "label", _("_Save"),
+          "use-underline", TRUE,
+          "can-default", TRUE,
+          NULL);
+  gtk_window_set_default (GTK_WINDOW (dialog->dialog), dialog->save_button);
+
+  gtk_widget_show (dialog->save_button);
+  gtk_container_add (GTK_CONTAINER (button_box), dialog->save_button);
+
   gtk_window_set_application (GTK_WINDOW (dialog->dialog), GTK_APPLICATION (g_application_get_default ()));
   gtk_widget_realize (dialog->dialog);
   g_signal_connect (dialog->dialog, "key-press-event",
