@@ -1,3 +1,14 @@
+gnome-screenshot (3.18.0-2linuxmint1) sarah; urgency=medium
+
+  * Removed help button
+  * Removed menu
+  * Removed headerbars
+  * Force interactive mode everywhere but in GNOME
+  * Only use GNOME's screenshot interface when running in GNOME
+  * Fixed window titles
+
+ -- Clement Lefebvre <root@linuxmint.com>  Fri, 13 May 2016 16:44:49 +0100
+
 gnome-screenshot (3.18.0-1ubuntu2) xenial; urgency=medium
 
   * 0002-Scale-images-by-the-scale-factor-in-use.patch: Drop - this patch was
