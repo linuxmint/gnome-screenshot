@@ -1,0 +1,196 @@
+GNOME Screenshot 3.18.0 - 22nd Sep 2015
+=======================================
+
+- Fix border effects combo
+- Translation updates
+
+GNOME Screenshot 3.16.2 - 12th May 2015
+=======================================
+
+- Fix translation not getting applied
+- Fix schema translations
+- Translation updates
+
+GNOME Screenshot 3.16.0 - 23th March 2015
+=========================================
+
+- Translation updates
+
+GNOME Screenshot 3.15.90 - 20th February 2015
+=============================================
+
+- Make desktop actions work
+- Deprecation cleanup (#742476)
+- Improve filename generation (#698740)
+- Port area selection code to GNOME Shell (#738972)
+- Translation updates
+
+GNOME Screenshot 3.14.0 - 22th September 2014
+=============================================
+
+- Translation updates
+
+GNOME Screenshot 3.13.92 - 16th September 2014
+==============================================
+
+- Fix launching from gnome-shell in interactive mode (Kalev Lember)
+- Parse delay cmdline parameter correctly (Ryan Lortie)
+- Parse filename cmdline parameter correctly (Matthias Clasen)
+- Remove duplicate cmdline parsing (Dominique Leuenberger)
+- Add missing desktop file category (Elad Alfassa)
+
+GNOME Screenshot 3.13.90 - 21st August 2014
+===========================================
+
+- Don't use deprecated GTK+ API (Matthias Clasen)
+- Port commandline handling to GApplication (Matthias Clasen)
+- Make DBus activatable (Matthias Clasen)
+- Implement g_application_activate() (Michael Catanzaro)
+- Translation updates
+
+GNOME Screenshot 3.12.0 - 25th March 2014
+=========================================
+
+- Translation updates
+
+GNOME Screenshot 3.11.90 - 17th February 2014
+=============================================
+
+- Use GtkHeaderBar (Yosef Or Boczko)
+- Standardize Help/About/Quit in app menu (Michael Catanzaro)
+- Support HiDpi scale factor when rendering preview
+
+GNOME Screenshot 3.10.1 - 18th November 2013
+============================================
+
+- Add a --version option (Thomas Hindoe Paaboel Andersen)
+- Translation updates
+
+GNOME Screenshot 3.10.0 - 23th September 2013
+=============================================
+
+- Initialize file type in interactive mode (Matthias Clasen)
+- Translation updates
+
+GNOME Screenshot 3.9.90 - 20th August 2013
+==========================================
+
+- Add a GSetting option to specify default format (Stefan Assmann)
+- Translation updates
+
+GNOME Screenshot 3.9.4 - 10th July 2013
+=======================================
+
+- Fix app menu and WM close button not showing (John Wendell)
+- Translation updates
+
+GNOME Screenshot 3.9.3 - 17th June 2013
+=======================================
+
+- Determine image format from extension (Shih-Yuan Lee)
+- Update the manual page (Matthias Clasen)
+- Translation updates
+
+GNOME Screenshot 3.8.1 - 15th April 2013
+========================================
+
+- Fix keyboard focus in interactive dialog (Robin Stocker)
+- Translation updates
+
+GNOME Screenshot 3.8.0 - 25th March 2013
+========================================
+
+- Translation updates
+
+GNOME Screenshot 3.7.5 - 6th February 2013
+==========================================
+
+- Show interactive dialog again when the area selection is cancelled
+- Don't crash when the selected area rectangle is 0x0
+- Translation updates
+
+GNOME Screenshot 3.7.4 - 14th January 2013
+==========================================
+
+- Use the new Shell DBus interface name
+- Add keywords to the desktop file
+- Don't call g_type_init(), depends on GLib 2.35
+- Translation updates
+
+GNOME Screenshot 3.6.0 - 24th September 2012
+=============================================
+
+- Translation updates
+
+GNOME Screenshot 3.5.92 - 17th September 2012
+=============================================
+
+- Translation updates
+
+GNOME Screenshot 3.5.91 - 4th September 2012
+============================================
+
+- Translation updates
+
+GNOME Screenshot 3.5.90 - 20th August 2012
+==========================================
+
+- Fix conflict between two label's mnemonics (Jiro Matsuzawa)
+- Translation updates
+
+GNOME Screenshot 3.5.4 - 16th July 2012
+=======================================
+
+- Add a way for ScreenshotFilenameBuilder to be used standalone
+  (Bastien Nocera)
+- Don't use g_strconcat() to build URIs (Bastien Nocera)
+- Add API to change the "from..." text in ScreenshotFilenameBuilder
+  (Bastien Nocera)
+
+GNOME Screenshot 3.5.2 - 4th June 2012
+======================================
+
+- Add an application menu for interactive mode
+- Add a --file commandline option (Kjell Ahlstedt)
+- Add an --include-pointer commandline option (Kjell Ahlstedt)
+- Don't warn if fallback X11 code path is hit
+- Warn if --interactive is combined with --clipboard (Kjell Ahlstedt)
+- Rename "whole desktop" to "whole screen"
+- Update quicklists for new fd.o spec (Jeremy Bicha)
+- Use GResource for UI files
+
+GNOME Screenshot 3.4.1 - 16th April 2012
+========================================
+
+- Fall back to $HOME when XDG_PICTURES_DIR fails
+- Translation updates
+
+GNOME Screenshot 3.4.0 - 26th March 2012
+========================================
+
+- Translation updates
+
+GNOME Screenshot 3.3.92 - 19th March 2012
+=========================================
+
+- Translation updates
+
+GNOME Screenshot 3.3.91 - 5th March 2012
+========================================
+
+- Use the new Shell API to include mouse pointer
+- Make sure not to override the delay setting for non-interactive mode
+
+GNOME Screenshot 3.3.2 - 6th February 2012
+==========================================
+
+- Make non-interactive mode headless
+- Update to the new shell Screenshot API
+- Port to GApplication
+
+GNOME Screenshot 3.3.1 - 25th October 2011
+==========================================
+
+- First unstable release of the 3.3 cycle
+- First standalone release after the GNOME Utilities module split
+- Use the GNOME Shell screenshot interface if available

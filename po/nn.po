@@ -1,0 +1,361 @@
+# translation of nn.po to Norwegian Nynorsk
+# Norwegian (nynorsk) translation of gnome-utils.
+# Copyright (C) 2001 Roy-Magne Mo
+# Kjartan Maraas  <kmaraas@gnome.org>, 2001.
+# Roy-Magne Mo <rmo@sunnmore.net>, 2001.
+# Åsmund Skjæveland <aasmunds@fys.uio.no>, 2004.
+# Eskild Hustvedt <eskildh@gnome.org>, 2008
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: nn\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-10-06 14:33-0400\n"
+"PO-Revision-Date: 2008-04-01 08:41+0200\n"
+"Last-Translator: Eskild Hustvedt <eskildh@gnome.org>\n"
+"Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
+"Language: nn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+"X-Generator: MagicPO 0.3\n"
+
+#
+#: ../src/gnome-screenshot.c:143
+#, fuzzy
+msgid "Error while saving screenshot"
+msgstr "Feil under søking etter treff"
+
+#: ../src/gnome-screenshot.c:147
+#, c-format
+msgid ""
+"Impossible to save the screenshot to %s.\n"
+" Error was %s.\n"
+" Please choose another location and retry."
+msgstr ""
+
+#
+#: ../src/gnome-screenshot.c:336
+#, fuzzy
+msgid "Screenshot taken"
+msgstr "Skjermbilete.png"
+
+#
+#: ../src/gnome-screenshot.c:495
+msgid "Unable to take a screenshot of the current window"
+msgstr "Kan ikkje ta eit skjermbilete av dette vindauget"
+
+#: ../src/gnome-screenshot.c:662
+msgid "Send the grab directly to the clipboard"
+msgstr ""
+
+#
+#: ../src/gnome-screenshot.c:663
+msgid "Grab a window instead of the entire screen"
+msgstr "Dump eit vindauge i staden for heile skjermen"
+
+#
+#: ../src/gnome-screenshot.c:664
+#, fuzzy
+msgid "Grab an area of the screen instead of the entire screen"
+msgstr "Dump eit vindauge i staden for heile skjermen"
+
+#
+#: ../src/gnome-screenshot.c:665
+msgid "Include the window border with the screenshot"
+msgstr "Ta med vinduskant i skjermbilete"
+
+#
+#: ../src/gnome-screenshot.c:666
+#, fuzzy
+msgid "Remove the window border from the screenshot"
+msgstr "Ta med vinduskant i skjermbilete"
+
+#
+#: ../src/gnome-screenshot.c:667
+msgid "Take screenshot after specified delay [in seconds]"
+msgstr "Ta eit skjermbilete etter oppgjeven pause [i sekund]"
+
+#
+#. translators: this is the last part of the "grab after a
+#. * delay of <spin button> seconds".
+#.
+#: ../src/gnome-screenshot.c:667 ../src/screenshot-interactive-dialog.c:423
+msgid "seconds"
+msgstr "sekund"
+
+#
+#: ../src/gnome-screenshot.c:668
+msgid "Effect to add to the border (shadow, border or none)"
+msgstr "Effekt som skal brukast på vinduskanten (skugge, kant eller inga)"
+
+#
+#: ../src/gnome-screenshot.c:668
+msgid "effect"
+msgstr "effekt"
+
+#
+#: ../src/gnome-screenshot.c:669
+msgid "Interactively set options"
+msgstr "Spør etter alternativ"
+
+#
+#: ../src/gnome-screenshot.c:680
+msgid "Take a picture of the screen"
+msgstr "Ta eit bilete av skjermen"
+
+#
+#: ../src/gnome-screenshot.desktop.in.h:1
+msgid "Save images of your desktop or individual windows"
+msgstr "Lagra bileta av ditt skrivebord eller individuelle vindauge"
+
+#
+#: ../src/gnome-screenshot.desktop.in.h:2
+#, fuzzy
+msgid "Screenshot"
+msgstr "Skjermbilete.png"
+
+#
+#: ../src/gnome-screenshot.desktop.in.h:3
+#, fuzzy
+msgid "Take a screenshot of the current window"
+msgstr "Kan ikkje ta eit skjermbilete av dette vindauget"
+
+#
+#: ../src/gnome-screenshot.desktop.in.h:4
+#, fuzzy
+msgid "Take a screenshot of the whole screen"
+msgstr "Ta eit bilete av skjermen"
+
+#: ../src/gnome-screenshot.ui.h:1
+msgid "*"
+msgstr "*"
+
+#: ../src/gnome-screenshot.ui.h:2
+msgid "C_opy to Clipboard"
+msgstr ""
+
+#
+#: ../src/gnome-screenshot.ui.h:3
+msgid "Save Screenshot"
+msgstr "Lagra skjermbilete"
+
+#
+#: ../src/gnome-screenshot.ui.h:4
+msgid "Save in _folder:"
+msgstr "Lagra i _mappe:"
+
+#
+#: ../src/gnome-screenshot.ui.h:5
+msgid "_Name:"
+msgstr "_Namn:"
+
+#
+#: ../src/org.gnome.gnome-screenshot.gschema.xml.in.h:1
+msgid "Border Effect"
+msgstr "Effekt for kant"
+
+#
+#: ../src/org.gnome.gnome-screenshot.gschema.xml.in.h:2
+msgid ""
+"Effect to add to the outside of a border. Possible values are \"shadow\", "
+"\"none\", and \"border\"."
+msgstr ""
+"Effekt som skal leggjes til på utsida av kanten. Moglege verdiar er "
+"«shadow», «none» og «border»."
+
+#
+#: ../src/org.gnome.gnome-screenshot.gschema.xml.in.h:3
+#, fuzzy
+msgid ""
+"Grab just the current window, rather than the whole desktop. This key has "
+"been deprecated and it is no longer in use."
+msgstr ""
+"Portnummer for tilkoplinga. Forvald port er 2628. Denne innstillinga er "
+"ikkje lenger i bruk."
+
+#
+#: ../src/org.gnome.gnome-screenshot.gschema.xml.in.h:4
+msgid "Include Border"
+msgstr "Ta med kant"
+
+#
+#: ../src/org.gnome.gnome-screenshot.gschema.xml.in.h:5
+#, fuzzy
+msgid "Include ICC Profile"
+msgstr "Ta med kant"
+
+#
+#: ../src/org.gnome.gnome-screenshot.gschema.xml.in.h:6
+#, fuzzy
+msgid "Include Pointer"
+msgstr "Ta med kant"
+
+#
+#: ../src/org.gnome.gnome-screenshot.gschema.xml.in.h:7
+#, fuzzy
+msgid "Include the ICC profile of the target in the screenshot file"
+msgstr "Ta med vinduskant i skjermbilete"
+
+#
+#: ../src/org.gnome.gnome-screenshot.gschema.xml.in.h:8
+#, fuzzy
+msgid "Include the pointer in the screenshot"
+msgstr "Ta med vinduskant i skjermbilete"
+
+#
+#: ../src/org.gnome.gnome-screenshot.gschema.xml.in.h:9
+msgid "Include the window manager border along with the screenshot"
+msgstr "Ta med vindaugehandsamarens kant i skjermbilete."
+
+#
+#: ../src/org.gnome.gnome-screenshot.gschema.xml.in.h:10
+#, fuzzy
+msgid "Screenshot delay"
+msgstr "Mappe for skjermbilete"
+
+#
+#: ../src/org.gnome.gnome-screenshot.gschema.xml.in.h:11
+msgid "Screenshot directory"
+msgstr "Mappe for skjermbilete"
+
+#
+#: ../src/org.gnome.gnome-screenshot.gschema.xml.in.h:12
+msgid "The directory the last screenshot was saved in."
+msgstr "Mappe kor førre skjermbilete vart lagra."
+
+#: ../src/org.gnome.gnome-screenshot.gschema.xml.in.h:13
+msgid "The number of seconds to wait before taking the screenshot."
+msgstr ""
+
+#: ../src/org.gnome.gnome-screenshot.gschema.xml.in.h:14
+msgid "Window-specific screenshot (deprecated)"
+msgstr ""
+
+#: ../src/screenshot-config.c:78
+#, c-format
+msgid ""
+"Conflicting options: --window and --area should not be used at the same "
+"time.\n"
+msgstr ""
+
+#: ../src/screenshot-config.c:85
+#, c-format
+msgid ""
+"Conflicting options: --area and --delay should not be used at the same "
+"time.\n"
+msgstr ""
+
+#
+#: ../src/screenshot-dialog.c:193
+#, fuzzy
+msgid ""
+"UI definition file for the screenshot program is missing.\n"
+"Please check your installation of gnome-utils"
+msgstr ""
+"Glade-fil for skjermbileteprogrammet manglar.\n"
+"Sjekk gnome-utils-installasjonen."
+
+#
+#: ../src/screenshot-dialog.c:214
+msgid "Select a folder"
+msgstr "Vel ei mappe"
+
+#
+#: ../src/screenshot-dialog.c:323
+msgid "Screenshot.png"
+msgstr "Skjermbilete.png"
+
+#. translators: this is the name of the file that gets made up
+#. * with the screenshot if the entire screen is taken
+#: ../src/screenshot-filename-builder.c:119
+#, fuzzy, c-format
+msgid "Screenshot at %s.png"
+msgstr "Skjermbilete-%s.png"
+
+#. translators: this is the name of the file that gets
+#. * made up with the screenshot if the entire screen is
+#. * taken
+#: ../src/screenshot-filename-builder.c:126
+#, fuzzy, c-format
+msgid "Screenshot at %s - %d.png"
+msgstr "Skjermbilete-%s-%d.png"
+
+#
+#: ../src/screenshot-interactive-dialog.c:165
+msgid "None"
+msgstr "Inga"
+
+#
+#: ../src/screenshot-interactive-dialog.c:166
+msgid "Drop shadow"
+msgstr "Skugge"
+
+#
+#: ../src/screenshot-interactive-dialog.c:167
+msgid "Border"
+msgstr "Kant"
+
+#
+#. * Include pointer *
+#: ../src/screenshot-interactive-dialog.c:271
+#, fuzzy
+msgid "Include _pointer"
+msgstr "Ta med kant"
+
+#
+#. * Include window border *
+#: ../src/screenshot-interactive-dialog.c:281
+msgid "Include the window _border"
+msgstr "Ta med vin_daugekant"
+
+#
+#: ../src/screenshot-interactive-dialog.c:298
+msgid "Apply _effect:"
+msgstr "Bruk _effekt:"
+
+#
+#: ../src/screenshot-interactive-dialog.c:360
+msgid "Grab the whole _desktop"
+msgstr "Ta eit skjermbilete av heile skrivebor_det"
+
+#
+#: ../src/screenshot-interactive-dialog.c:374
+msgid "Grab the current _window"
+msgstr "Ta eit skjermbilete av aktivt _vindauge"
+
+#
+#: ../src/screenshot-interactive-dialog.c:386
+#, fuzzy
+msgid "Select _area to grab"
+msgstr "Vel ei mappe"
+
+#
+#. translators: this is the first part of the "grab after a
+#. * delay of <spin button> seconds".
+#.
+#: ../src/screenshot-interactive-dialog.c:403
+msgid "Grab _after a delay of"
+msgstr "T_a eit skjermbilete etter"
+
+#
+#: ../src/screenshot-interactive-dialog.c:441
+#: ../src/screenshot-interactive-dialog.c:449
+msgid "Take Screenshot"
+msgstr "Ta eit skjermbilete"
+
+#
+#: ../src/screenshot-interactive-dialog.c:450
+msgid "Effects"
+msgstr "Effektar"
+
+#
+#: ../src/screenshot-interactive-dialog.c:455
+msgid "Take _Screenshot"
+msgstr "Ta eit _skjermbilete"
+
+#
+#: ../src/screenshot-utils.c:702
+msgid "Error loading the help page"
+msgstr "Feil under lasting av hjelpsida"

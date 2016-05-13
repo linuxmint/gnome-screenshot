@@ -1,0 +1,319 @@
+# Shavian translation for gnome-utils.
+# Copyright (C) 2009 The Gnome Foundation.
+# Thomas Thurman <tthurman@gnome.org>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-utils\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-10-06 14:33-0400\n"
+"PO-Revision-Date: 2010-05-12 18:36 -0400\n"
+"Last-Translator: Thomas Thurman <tthurman@gnome.org>\n"
+"Language-Team: Shavian <ubuntu-l10n-en-shaw@launchpad.net>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n!=1;\n"
+
+#: ../src/gnome-screenshot.c:143
+#, fuzzy
+msgid "Error while saving screenshot"
+msgstr "𐑻𐑼 𐑢𐑲𐑤 𐑕𐑱𐑝𐑦𐑙 screenshot"
+
+#: ../src/gnome-screenshot.c:147
+#, fuzzy, c-format
+msgid ""
+"Impossible to save the screenshot to %s.\n"
+" Error was %s.\n"
+" Please choose another location and retry."
+msgstr ""
+"𐑦𐑥𐑐𐑪𐑕𐑩𐑚𐑩𐑤 𐑑 𐑕𐑱𐑝 𐑞 screenshot 𐑑 %s.\n"
+" 𐑻𐑼 𐑢𐑪𐑟 %s.\n"
+" 𐑐𐑤𐑰𐑟 𐑗𐑵𐑟 𐑩𐑯𐑳𐑞𐑼 𐑤𐑴𐑒𐑱𐑖𐑩𐑯 𐑯 𐑮𐑰𐑑𐑮𐑲."
+
+#: ../src/gnome-screenshot.c:336
+#, fuzzy
+msgid "Screenshot taken"
+msgstr "Screenshot 𐑑𐑱𐑒𐑩𐑯"
+
+#: ../src/gnome-screenshot.c:495
+#, fuzzy
+msgid "Unable to take a screenshot of the current window"
+msgstr "𐑳𐑯𐑱𐑚𐑩𐑤 𐑑 𐑑𐑱𐑒 𐑩 screenshot 𐑝 𐑞 𐑒𐑳𐑮𐑩𐑯𐑑 𐑢𐑦𐑯𐑛𐑴"
+
+#: ../src/gnome-screenshot.c:662
+#, fuzzy
+msgid "Send the grab directly to the clipboard"
+msgstr "𐑕𐑧𐑑 𐑞 𐑥𐑪𐑛𐑩𐑤 𐑝 𐑞 𐑗𐑸𐑑"
+
+#: ../src/gnome-screenshot.c:663
+msgid "Grab a window instead of the entire screen"
+msgstr "𐑜𐑮𐑨𐑚 𐑩 𐑢𐑦𐑯𐑛𐑴 𐑦𐑯𐑕𐑑𐑧𐑛 𐑝 𐑞 𐑧𐑯𐑑𐑲𐑼 𐑕𐑒𐑮𐑰𐑯"
+
+#: ../src/gnome-screenshot.c:664
+msgid "Grab an area of the screen instead of the entire screen"
+msgstr "𐑜𐑮𐑨𐑚 𐑩𐑯 𐑺𐑦𐑩 𐑝 𐑞 𐑕𐑒𐑮𐑰𐑯 𐑦𐑯𐑕𐑑𐑧𐑛 𐑝 𐑞 𐑧𐑯𐑑𐑲𐑼 𐑕𐑒𐑮𐑰𐑯"
+
+#: ../src/gnome-screenshot.c:665
+#, fuzzy
+msgid "Include the window border with the screenshot"
+msgstr "𐑦𐑯𐑒𐑤𐑵𐑛 𐑞 𐑢𐑦𐑯𐑛𐑴 𐑚𐑹𐑛𐑼 𐑢𐑦𐑞 𐑞 screenshot"
+
+#: ../src/gnome-screenshot.c:666
+#, fuzzy
+msgid "Remove the window border from the screenshot"
+msgstr "𐑮𐑦𐑥𐑵𐑝 𐑞 𐑢𐑦𐑯𐑛𐑴 𐑚𐑹𐑛𐑼 𐑓𐑮𐑪𐑥 𐑞 screenshot"
+
+#: ../src/gnome-screenshot.c:667
+#, fuzzy
+msgid "Take screenshot after specified delay [in seconds]"
+msgstr "𐑑𐑱𐑒 screenshot 𐑭𐑓𐑑𐑼 𐑕𐑐𐑧𐑕𐑦𐑓𐑲𐑛 𐑛𐑦𐑤𐑱 [𐑦𐑯 𐑕𐑧𐑒𐑩𐑯𐑛𐑟]"
+
+#. translators: this is the last part of the "grab after a
+#. * delay of <spin button> seconds".
+#.
+#: ../src/gnome-screenshot.c:667 ../src/screenshot-interactive-dialog.c:423
+msgid "seconds"
+msgstr "𐑕𐑧𐑒𐑩𐑯𐑛𐑟"
+
+#: ../src/gnome-screenshot.c:668
+msgid "Effect to add to the border (shadow, border or none)"
+msgstr "𐑦𐑓𐑧𐑒𐑑 𐑑 𐑨𐑛 𐑑 𐑞 𐑚𐑹𐑛𐑼 (𐑖𐑨𐑛𐑴, 𐑚𐑹𐑛𐑼 𐑹 𐑯𐑳𐑯)"
+
+#: ../src/gnome-screenshot.c:668
+msgid "effect"
+msgstr "𐑦𐑓𐑧𐑒𐑑"
+
+#: ../src/gnome-screenshot.c:669
+#, fuzzy
+msgid "Interactively set options"
+msgstr "Interactively 𐑕𐑧𐑑 𐑪𐑐𐑖𐑩𐑯𐑟"
+
+#: ../src/gnome-screenshot.c:680
+msgid "Take a picture of the screen"
+msgstr "𐑑𐑱𐑒 𐑩 𐑐𐑦𐑒𐑗𐑼 𐑝 𐑞 𐑕𐑒𐑮𐑰𐑯"
+
+#: ../src/gnome-screenshot.desktop.in.h:1
+msgid "Save images of your desktop or individual windows"
+msgstr "𐑕𐑱𐑝 𐑦𐑥𐑦𐑡𐑩𐑟 𐑝 𐑿𐑼 𐑛𐑧𐑕𐑒𐑑𐑪𐑐 𐑹 𐑦𐑯𐑛𐑦𐑝𐑦𐑛𐑿𐑩𐑤 𐑢𐑦𐑯𐑛𐑴𐑟"
+
+#: ../src/gnome-screenshot.desktop.in.h:2
+#, fuzzy
+msgid "Screenshot"
+msgstr "Screenshot.·𐑐·𐑯·𐑜"
+
+#: ../src/gnome-screenshot.desktop.in.h:3
+#, fuzzy
+msgid "Take a screenshot of the current window"
+msgstr "𐑳𐑯𐑱𐑚𐑩𐑤 𐑑 𐑑𐑱𐑒 𐑩 screenshot 𐑝 𐑞 𐑒𐑳𐑮𐑩𐑯𐑑 𐑢𐑦𐑯𐑛𐑴"
+
+#: ../src/gnome-screenshot.desktop.in.h:4
+#, fuzzy
+msgid "Take a screenshot of the whole screen"
+msgstr "𐑑𐑱𐑒 𐑩 𐑐𐑦𐑒𐑗𐑼 𐑝 𐑞 𐑕𐑒𐑮𐑰𐑯"
+
+#: ../src/gnome-screenshot.ui.h:1
+msgid "*"
+msgstr "*"
+
+#: ../src/gnome-screenshot.ui.h:2
+#, fuzzy
+msgid "C_opy to Clipboard"
+msgstr "C_opy 𐑑 𐑒𐑤𐑦𐑐𐑚𐑹𐑛"
+
+#: ../src/gnome-screenshot.ui.h:3
+#, fuzzy
+msgid "Save Screenshot"
+msgstr "𐑕𐑱𐑝 Screenshot"
+
+#: ../src/gnome-screenshot.ui.h:4
+msgid "Save in _folder:"
+msgstr "𐑕𐑱𐑝 𐑦𐑯 _𐑓𐑴𐑤𐑛𐑼:"
+
+#: ../src/gnome-screenshot.ui.h:5
+msgid "_Name:"
+msgstr "_𐑯𐑱𐑥:"
+
+#: ../src/org.gnome.gnome-screenshot.gschema.xml.in.h:1
+msgid "Border Effect"
+msgstr "𐑚𐑹𐑛𐑼 𐑦𐑓𐑧𐑒𐑑"
+
+#: ../src/org.gnome.gnome-screenshot.gschema.xml.in.h:2
+msgid ""
+"Effect to add to the outside of a border. Possible values are \"shadow\", "
+"\"none\", and \"border\"."
+msgstr ""
+"𐑦𐑓𐑧𐑒𐑑 𐑑 𐑨𐑛 𐑑 𐑞 𐑬𐑑𐑕𐑲𐑛 𐑝 𐑩 𐑚𐑹𐑛𐑼. 𐑐𐑪𐑕𐑩𐑚𐑩𐑤 𐑝𐑨𐑤𐑿𐑟 𐑸 \"shadow\", \"none\", 𐑯 "
+"\"border\"."
+
+#: ../src/org.gnome.gnome-screenshot.gschema.xml.in.h:3
+msgid ""
+"Grab just the current window, rather than the whole desktop. This key has "
+"been deprecated and it is no longer in use."
+msgstr ""
+"𐑜𐑮𐑨𐑚 𐑡𐑳𐑕𐑑 𐑞 𐑒𐑳𐑮𐑩𐑯𐑑 𐑢𐑦𐑯𐑛𐑴, 𐑮𐑭𐑞𐑼 𐑞𐑨𐑯 𐑞 𐑣𐑴𐑤 𐑛𐑧𐑕𐑒𐑑𐑪𐑐. 𐑞𐑦𐑕 𐑒𐑰 𐑣𐑨𐑟 𐑚𐑰𐑯 𐑛𐑧𐑐𐑮𐑩𐑒𐑱𐑑𐑩𐑛 "
+"𐑯 𐑦𐑑 𐑦𐑟 𐑯𐑴 𐑤𐑪𐑙𐑜𐑼 𐑦𐑯 𐑿𐑕."
+
+#: ../src/org.gnome.gnome-screenshot.gschema.xml.in.h:4
+msgid "Include Border"
+msgstr "𐑦𐑯𐑒𐑤𐑵𐑛 𐑚𐑹𐑛𐑼"
+
+#: ../src/org.gnome.gnome-screenshot.gschema.xml.in.h:5
+#, fuzzy
+msgid "Include ICC Profile"
+msgstr "𐑦𐑯𐑒𐑤𐑵𐑛 𐑐𐑶𐑯𐑑𐑼"
+
+#: ../src/org.gnome.gnome-screenshot.gschema.xml.in.h:6
+msgid "Include Pointer"
+msgstr "𐑦𐑯𐑒𐑤𐑵𐑛 𐑐𐑶𐑯𐑑𐑼"
+
+#: ../src/org.gnome.gnome-screenshot.gschema.xml.in.h:7
+#, fuzzy
+msgid "Include the ICC profile of the target in the screenshot file"
+msgstr "𐑦𐑯𐑒𐑤𐑵𐑛 𐑞 𐑐𐑶𐑯𐑑𐑼 𐑦𐑯 𐑞 screenshot"
+
+#: ../src/org.gnome.gnome-screenshot.gschema.xml.in.h:8
+#, fuzzy
+msgid "Include the pointer in the screenshot"
+msgstr "𐑦𐑯𐑒𐑤𐑵𐑛 𐑞 𐑐𐑶𐑯𐑑𐑼 𐑦𐑯 𐑞 screenshot"
+
+#: ../src/org.gnome.gnome-screenshot.gschema.xml.in.h:9
+#, fuzzy
+msgid "Include the window manager border along with the screenshot"
+msgstr "𐑦𐑯𐑒𐑤𐑵𐑛 𐑞 𐑢𐑦𐑯𐑛𐑴 𐑥𐑨𐑯𐑩𐑡𐑼 𐑚𐑹𐑛𐑼 𐑩𐑤𐑪𐑙 𐑢𐑦𐑞 𐑞 screenshot"
+
+#: ../src/org.gnome.gnome-screenshot.gschema.xml.in.h:10
+#, fuzzy
+msgid "Screenshot delay"
+msgstr "Screenshot 𐑛𐑦𐑤𐑱"
+
+#: ../src/org.gnome.gnome-screenshot.gschema.xml.in.h:11
+#, fuzzy
+msgid "Screenshot directory"
+msgstr "Screenshot 𐑛𐑲𐑮𐑧𐑒𐑑𐑼𐑦"
+
+#: ../src/org.gnome.gnome-screenshot.gschema.xml.in.h:12
+#, fuzzy
+msgid "The directory the last screenshot was saved in."
+msgstr "𐑞 𐑛𐑲𐑮𐑧𐑒𐑑𐑼𐑦 𐑞 𐑤𐑭𐑕𐑑 screenshot 𐑢𐑪𐑟 𐑕𐑱𐑝𐑛 𐑦𐑯."
+
+#: ../src/org.gnome.gnome-screenshot.gschema.xml.in.h:13
+#, fuzzy
+msgid "The number of seconds to wait before taking the screenshot."
+msgstr "𐑞 𐑯𐑳𐑥𐑚𐑼 𐑝 𐑕𐑧𐑒𐑩𐑯𐑛𐑟 𐑑 𐑢𐑱𐑑 𐑚𐑦𐑓𐑹 𐑑𐑱𐑒𐑦𐑙 𐑞 screenshot."
+
+#: ../src/org.gnome.gnome-screenshot.gschema.xml.in.h:14
+#, fuzzy
+msgid "Window-specific screenshot (deprecated)"
+msgstr "𐑢𐑦𐑯𐑛𐑴-𐑕𐑐𐑩𐑕𐑦𐑓𐑦𐑒 screenshot (𐑛𐑧𐑐𐑮𐑩𐑒𐑱𐑑𐑩𐑛)"
+
+#: ../src/screenshot-config.c:78
+#, c-format
+msgid ""
+"Conflicting options: --window and --area should not be used at the same "
+"time.\n"
+msgstr "𐑒𐑩𐑯𐑓𐑤𐑦𐑒𐑑𐑦𐑙 𐑪𐑐𐑖𐑩𐑯𐑟: --window 𐑯 --area 𐑖𐑫𐑛 𐑯𐑪𐑑 𐑚𐑰 𐑿𐑟𐑛 𐑨𐑑 𐑞 𐑕𐑱𐑥 𐑑𐑲𐑥.\n"
+
+#: ../src/screenshot-config.c:85
+#, fuzzy, c-format
+msgid ""
+"Conflicting options: --area and --delay should not be used at the same "
+"time.\n"
+msgstr "𐑒𐑩𐑯𐑓𐑤𐑦𐑒𐑑𐑦𐑙 𐑪𐑐𐑖𐑩𐑯𐑟: --window 𐑯 --area 𐑖𐑫𐑛 𐑯𐑪𐑑 𐑚𐑰 𐑿𐑟𐑛 𐑨𐑑 𐑞 𐑕𐑱𐑥 𐑑𐑲𐑥.\n"
+
+#: ../src/screenshot-dialog.c:193
+#, fuzzy
+msgid ""
+"UI definition file for the screenshot program is missing.\n"
+"Please check your installation of gnome-utils"
+msgstr ""
+"UI 𐑛𐑧𐑓𐑩𐑯𐑦𐑖𐑩𐑯 𐑓𐑲𐑤 𐑓𐑹 𐑞 screenshot 𐑐𐑮𐑴𐑜𐑮𐑨𐑥 𐑦𐑟 𐑥𐑦𐑕𐑦𐑙.\n"
+"𐑐𐑤𐑰𐑟 𐑗𐑧𐑒 𐑿𐑼 𐑦𐑯𐑕𐑑𐑩𐑤𐑱𐑖𐑩𐑯 𐑝 𐑯𐑴𐑥-utils"
+
+#: ../src/screenshot-dialog.c:214
+msgid "Select a folder"
+msgstr "𐑕𐑩𐑤𐑧𐑒𐑑 𐑩 𐑓𐑴𐑤𐑛𐑼"
+
+#: ../src/screenshot-dialog.c:323
+#, fuzzy
+msgid "Screenshot.png"
+msgstr "Screenshot.·𐑐·𐑯·𐑜"
+
+#. translators: this is the name of the file that gets made up
+#. * with the screenshot if the entire screen is taken
+#: ../src/screenshot-filename-builder.c:119
+#, fuzzy, c-format
+msgid "Screenshot at %s.png"
+msgstr "Screenshot-%s.·𐑐·𐑯·𐑜"
+
+#. translators: this is the name of the file that gets
+#. * made up with the screenshot if the entire screen is
+#. * taken
+#: ../src/screenshot-filename-builder.c:126
+#, fuzzy, c-format
+msgid "Screenshot at %s - %d.png"
+msgstr "Screenshot-%s-%d.·𐑐·𐑯·𐑜"
+
+#: ../src/screenshot-interactive-dialog.c:165
+msgid "None"
+msgstr "𐑯𐑳𐑯"
+
+#: ../src/screenshot-interactive-dialog.c:166
+msgid "Drop shadow"
+msgstr "𐑛𐑮𐑪𐑐 𐑖𐑨𐑛𐑴"
+
+#: ../src/screenshot-interactive-dialog.c:167
+msgid "Border"
+msgstr "𐑚𐑹𐑛𐑼"
+
+#. * Include pointer *
+#: ../src/screenshot-interactive-dialog.c:271
+msgid "Include _pointer"
+msgstr "𐑦𐑯𐑒𐑤𐑵𐑛 _𐑐𐑶𐑯𐑑𐑼"
+
+#. * Include window border *
+#: ../src/screenshot-interactive-dialog.c:281
+msgid "Include the window _border"
+msgstr "𐑦𐑯𐑒𐑤𐑵𐑛 𐑞 𐑢𐑦𐑯𐑛𐑴 _𐑚𐑹𐑛𐑼"
+
+#: ../src/screenshot-interactive-dialog.c:298
+msgid "Apply _effect:"
+msgstr "𐑩𐑐𐑤𐑲 _𐑦𐑓𐑧𐑒𐑑:"
+
+#: ../src/screenshot-interactive-dialog.c:360
+msgid "Grab the whole _desktop"
+msgstr "𐑜𐑮𐑨𐑚 𐑞 𐑣𐑴𐑤 _𐑛𐑧𐑕𐑒𐑑𐑪𐑐"
+
+#: ../src/screenshot-interactive-dialog.c:374
+msgid "Grab the current _window"
+msgstr "𐑜𐑮𐑨𐑚 𐑞 𐑒𐑳𐑮𐑩𐑯𐑑 _𐑢𐑦𐑯𐑛𐑴"
+
+#: ../src/screenshot-interactive-dialog.c:386
+msgid "Select _area to grab"
+msgstr "𐑕𐑩𐑤𐑧𐑒𐑑 _𐑺𐑦𐑩 𐑑 𐑜𐑮𐑨𐑚"
+
+#. translators: this is the first part of the "grab after a
+#. * delay of <spin button> seconds".
+#.
+#: ../src/screenshot-interactive-dialog.c:403
+msgid "Grab _after a delay of"
+msgstr "𐑜𐑮𐑨𐑚 _𐑭𐑓𐑑𐑼 𐑩 𐑛𐑦𐑤𐑱 𐑝"
+
+#: ../src/screenshot-interactive-dialog.c:441
+#: ../src/screenshot-interactive-dialog.c:449
+#, fuzzy
+msgid "Take Screenshot"
+msgstr "𐑑𐑱𐑒 Screenshot"
+
+#: ../src/screenshot-interactive-dialog.c:450
+msgid "Effects"
+msgstr "𐑦𐑓𐑧𐑒𐑑𐑕"
+
+#: ../src/screenshot-interactive-dialog.c:455
+#, fuzzy
+msgid "Take _Screenshot"
+msgstr "𐑑𐑱𐑒 _Screenshot"
+
+#: ../src/screenshot-utils.c:702
+msgid "Error loading the help page"
+msgstr "𐑻𐑼 𐑤𐑴𐑛𐑦𐑙 𐑞 𐑣𐑧𐑤𐑐 𐑐𐑱𐑡"

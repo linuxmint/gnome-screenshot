@@ -1,0 +1,285 @@
+# Gnome-screenshoti eesti keele tõlge.
+# Estonian translation of Gnome-screenshot.
+# Was part of gnome-utils before.
+#
+# Copyright (C) 1999, 2002, 2005, 2006 Free Software Foundation, Inc.
+# Copyright (C) 2007–2011 The GNOME Project.
+# This file is distributed under the same license as the gnome-utils package.
+#
+# Lauris Kaplinski <lauris ariman ee>, 1999.
+# Tõivo Leedjärv <toivo linux ee>, 2002.
+# Ivar Smolin <okul linux ee>, 2005–2011.
+# Priit Laes <amd store20 com>, 2005.
+# Mattias Põldaru <mahfiaz@gmail.com>, 2012, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-utils MASTER\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"screenshot&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2013-09-10 10:48+0000\n"
+"PO-Revision-Date: 2013-09-11 23:06+0300\n"
+"Last-Translator: Mattias Põldaru <mahfiaz@gmail.com>\n"
+"Language-Team: Estonian <>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Generator: Poedit 1.5.4\n"
+
+msgid "Screenshot"
+msgstr "Ekraanipilt"
+
+msgid "Save images of your screen or individual windows"
+msgstr "Ekraanist või üksikutest akendest pildi salvestamine"
+
+msgid "snapshot;capture;print;"
+msgstr "kuvatõmmis;ekraanipilt;ekraanisalvestus;kaader;"
+
+msgid "Take a Screenshot of the Whole Screen"
+msgstr "Tervest ekraanist ekraanipildi tegemine"
+
+msgid "Take a Screenshot of the Current Window"
+msgstr "Käesolevast aknast ekraanipildi tegemine"
+
+msgid "About Screenshot"
+msgstr "Ekraanipildi võtjast lähemalt"
+
+msgid "Help"
+msgstr "Abi"
+
+msgid "Quit"
+msgstr "Lõpeta"
+
+msgid "Save Screenshot"
+msgstr "Ekraanipildi salvestamine"
+
+msgid "_Name:"
+msgstr "_Nimi:"
+
+msgid "Save in _folder:"
+msgstr "Salvestada _kataloogi:"
+
+msgid "C_opy to Clipboard"
+msgstr "K_opeeri lõikelauale"
+
+msgid "Window-specific screenshot (deprecated)"
+msgstr "Aknaspetsiifiline ekraanipilt (aegunud)"
+
+msgid ""
+"Grab just the current window, rather than the whole desktop. This key has "
+"been deprecated and it is no longer in use."
+msgstr ""
+"Ekraanipildi võtmine käesolevast aknast, mitte tervest töölauast. See võti "
+"on aegunud ja pole enam kasutusel."
+
+msgid "Screenshot delay"
+msgstr "Ekraanipildi viivitus"
+
+msgid "The number of seconds to wait before taking the screenshot."
+msgstr "Viivituse kestus (sekundites) enne ekraanipildi võtmist."
+
+msgid "Screenshot directory"
+msgstr "Ekraanipiltide kataloog"
+
+msgid "The directory where the screenshots will be saved by default."
+msgstr "Kataloog, kuhu ekraanipildid vaikimisi salvestatakse."
+
+msgid "Last save directory"
+msgstr "Viimase pildi kataloog"
+
+msgid "The last directory a screenshot was saved in interactive mode."
+msgstr "Kataloog, kuhu kasutaja ekraanipildi viimati salvestas."
+
+msgid "Include Border"
+msgstr "Äärise kaasamine"
+
+msgid "Include the window manager border along with the screenshot"
+msgstr "Ekraanipildile akna äärise kaasamine"
+
+msgid "Include Pointer"
+msgstr "Kursori kaasamine"
+
+msgid "Include the pointer in the screenshot"
+msgstr "Ekraanipildile kursori kaasamine"
+
+msgid "Include ICC Profile"
+msgstr "ICC-profiili kaasamine"
+
+msgid "Include the ICC profile of the target in the screenshot file"
+msgstr "Ekraanipildi faili sihtseadme ICC-profiili lisamine"
+
+msgid "Border Effect"
+msgstr "Äärise efekt"
+
+msgid ""
+"Effect to add to the outside of a border. Possible values are \"shadow\", "
+"\"none\", and \"border\"."
+msgstr ""
+"Äärise välisküljele määratav efekt. Võimalikud väärtused on \"shadow"
+"\" (vari), \"none\" (puudub) ja \"border\" (äärisjoon)."
+
+msgid "Default file type extension"
+msgstr "Vaikimisi faililaiend"
+
+msgid "The default file type extension for screenshots."
+msgstr "Ekraanipildi failide vaikimisi laiend."
+
+#, c-format
+msgid "A file named \"%s\" already exists in \"%s\""
+msgstr "\"%s\" nimega fail on juba olemas kaustas \"%s\""
+
+msgid "Overwrite existing file?"
+msgstr "Kas kirjutada olemasolev fail üle?"
+
+msgid "Unable to capture a screenshot"
+msgstr "Ekraanipilti pole võimalik võtta"
+
+msgid "Error creating file. Please choose another location and retry."
+msgstr "Viga faili loomisel. Palun vali mõni teine asukoht ja proovi uuesti."
+
+msgid "Error creating file"
+msgstr "Viga faili loomisel"
+
+msgid "Screenshot taken"
+msgstr "Ekraanipilt on tehtud"
+
+msgid "All possible methods failed"
+msgstr "Kõik võimalikud meetodid nurjusid"
+
+msgid "Send the grab directly to the clipboard"
+msgstr "Saada pilt otse lõikepuhvrisse"
+
+msgid "Grab a window instead of the entire screen"
+msgstr "Pildi tegemine aknast, mitte tervest ekraanist"
+
+msgid "Grab an area of the screen instead of the entire screen"
+msgstr "Pildi tegemine ekraani osast, mitte tervest ekraanist"
+
+msgid "Include the window border with the screenshot"
+msgstr "Ekraanipildi võtmine koos akna äärisega"
+
+msgid "Remove the window border from the screenshot"
+msgstr "Ekraanipildi võtmine ilma akna ääriseta"
+
+msgid "Include the pointer with the screenshot"
+msgstr "Ekraanipildile kursori lisamine"
+
+msgid "Take screenshot after specified delay [in seconds]"
+msgstr "Ekraanipildi võtmine pärast määratud viivitust [sekundites]"
+
+#. translators: this is the last part of the "grab after a
+#. * delay of <spin button> seconds".
+#.
+msgid "seconds"
+msgstr "sekundit"
+
+msgid "Effect to add to the border (shadow, border or none)"
+msgstr "Äärisele lisatav efekt (vari, ääris või mitte midagi)"
+
+msgid "effect"
+msgstr "efekt"
+
+msgid "Interactively set options"
+msgstr "Valikute interaktiivne seadmine"
+
+msgid "Save screenshot directly to this file"
+msgstr "Ekraanipilt salvestatakse otse sellesse faili"
+
+msgid "filename"
+msgstr "failinimi"
+
+msgid "Take a picture of the screen"
+msgstr "Ekraanist pildi tegemine"
+
+msgid "translator-credits"
+msgstr ""
+"Lauris Kaplinski <lauris ariman ee>, 1999.\n"
+"Tõivo Leedjärv <toivo linux ee>, 2002.\n"
+"Ivar Smolin <okul linux ee>, 2005–2011.\n"
+"Priit Laes <amd store20 com>, 2005.\n"
+"Mattias Põldaru <mahfiaz@gmail.com>, 2012."
+
+#, c-format
+msgid ""
+"Conflicting options: --window and --area should not be used at the same "
+"time.\n"
+msgstr ""
+"Vastuolulised võtmed: --window ja --area ei tohi korraga kasutusel olla.\n"
+
+#, c-format
+msgid ""
+"Conflicting options: --area and --delay should not be used at the same "
+"time.\n"
+msgstr ""
+"Vastuolulised võtmed: --area ja --delay ei tohi korraga kasutusel olla.\n"
+
+msgid "Screenshot.png"
+msgstr "Ekraanipilt.png"
+
+#. translators: this is the name of the file that gets made up
+#. * with the screenshot if the entire screen is taken
+#, c-format
+msgid "Screenshot from %s.%s"
+msgstr "Ekraanipilt %s.%s"
+
+#. translators: this is the name of the file that gets
+#. * made up with the screenshot if the entire screen is
+#. * taken
+#, c-format
+msgid "Screenshot from %s - %d.%s"
+msgstr "Ekraanipilt %s - %d.%s"
+
+msgid "None"
+msgstr "Puudub"
+
+msgid "Drop shadow"
+msgstr "Vari"
+
+msgid "Border"
+msgstr "Ääris"
+
+#. * Include pointer *
+msgid "Include _pointer"
+msgstr "Kaastatakse ka ku_rsor"
+
+#. * Include window border *
+msgid "Include the window _border"
+msgstr "Kaasatakse ka akna ää_ris"
+
+msgid "Apply _effect:"
+msgstr "Rakendatav _efekt:"
+
+msgid "Grab the whole sc_reen"
+msgstr "Võetakse kogu _ekraanist"
+
+msgid "Grab the current _window"
+msgstr "Võ_etakse käesolev aken"
+
+msgid "Select _area to grab"
+msgstr "Vali ekraanipildi _piirid"
+
+#. translators: this is the first part of the "grab after a
+#. * delay of <spin button> seconds".
+#.
+msgid "Grab after a _delay of"
+msgstr "Pildi võtmine pärast _viivitust"
+
+msgid "Take Screenshot"
+msgstr "Ekraanipildi salvestamine"
+
+msgid "Effects"
+msgstr "Efektid"
+
+msgid "Take _Screenshot"
+msgstr "Võta _ekraanipilt"
+
+msgid "Error loading the help page"
+msgstr "Viga abiteabe lehe laadimisel"
+
+#~ msgid "*"
+#~ msgstr "*"
+
+#~ msgid "Select a folder"
+#~ msgstr "Kataloogi valimine"

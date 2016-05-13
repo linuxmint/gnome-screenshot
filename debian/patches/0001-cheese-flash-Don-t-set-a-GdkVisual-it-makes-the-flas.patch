@@ -1,0 +1,40 @@
+From a846198d824cd8dd39d37d869607cdb2193dbd83 Mon Sep 17 00:00:00 2001
+From: Iain Lane <iain@orangesquash.org.uk>
+Date: Mon, 8 Jun 2015 13:32:21 +0100
+Subject: [PATCH 1/2] cheese-flash: Don't set a GdkVisual: it makes the flash
+ never end on gtk3.16
+
+---
+ src/cheese-flash.c | 9 ---------
+ 1 file changed, 9 deletions(-)
+
+diff --git a/src/cheese-flash.c b/src/cheese-flash.c
+index f60cd56..51155bd 100644
+--- a/src/cheese-flash.c
++++ b/src/cheese-flash.c
+@@ -71,7 +71,6 @@ cheese_flash_init (CheeseFlash *self)
+   cairo_region_t *input_region;
+   GtkWindow *window;
+   GdkScreen *screen;
+-  GdkVisual *visual;
+ 
+   priv->flash_timeout_tag = 0;
+   priv->fade_timeout_tag  = 0;
+@@ -89,14 +88,6 @@ cheese_flash_init (CheeseFlash *self)
+   gtk_window_set_accept_focus (window, FALSE);
+   gtk_window_set_focus_on_map (window, FALSE);
+ 
+-  /* no shadow */
+-  screen = gtk_widget_get_screen (GTK_WIDGET (window));
+-  visual = gdk_screen_get_rgba_visual (screen);
+-  if (visual == NULL)
+-    visual = gdk_screen_get_system_visual (screen);
+-
+-  gtk_widget_set_visual (GTK_WIDGET (window), visual);
+-
+   /* Don't consume input */
+   gtk_widget_realize (GTK_WIDGET (window));
+ 
+-- 
+2.1.4
+

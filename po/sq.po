@@ -1,0 +1,324 @@
+# Përkthimi i mesazheve të gnome-utils në shqip
+# This file is distributed under the same license as the gnome-utils package.
+# Copyright (C) 2003, 2004 Free Software Foundation. Inc.
+# Laurent Dhima <laurenti@alblinux.net>, 2003, 2004, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-utils.HEAD.sq\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-10-06 14:34-0400\n"
+"PO-Revision-Date: 2005-08-17 12:40+0200\n"
+"Last-Translator: Laurent Dhima <laurenti@alblinux.net>\n"
+"Language-Team: Albanian <gnome-albanian-perkthyesit@lists.sourceforge.net>\n"
+"Language: sq\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../src/gnome-screenshot.c:143
+#, fuzzy
+msgid "Error while saving screenshot"
+msgstr "Gabim i panjohur gjatë ruajtjes së pamjes në disk"
+
+#: ../src/gnome-screenshot.c:147
+#, c-format
+msgid ""
+"Impossible to save the screenshot to %s.\n"
+" Error was %s.\n"
+" Please choose another location and retry."
+msgstr ""
+
+#: ../src/gnome-screenshot.c:336
+#, fuzzy
+msgid "Screenshot taken"
+msgstr "PamjaEkranit.png"
+
+#: ../src/gnome-screenshot.c:495
+#, fuzzy
+msgid "Unable to take a screenshot of the current window"
+msgstr ""
+"E pamundur marrja e pamjes së ekranit për hapësirën e tanishme të punës."
+
+#: ../src/gnome-screenshot.c:662
+msgid "Send the grab directly to the clipboard"
+msgstr ""
+
+#: ../src/gnome-screenshot.c:663
+msgid "Grab a window instead of the entire screen"
+msgstr "Fotografo një dritare në vend të të gjithë ekranit"
+
+#: ../src/gnome-screenshot.c:664
+#, fuzzy
+msgid "Grab an area of the screen instead of the entire screen"
+msgstr "Fotografo një dritare në vend të të gjithë ekranit"
+
+#: ../src/gnome-screenshot.c:665
+msgid "Include the window border with the screenshot"
+msgstr "Përfshi kornizën e dritares tek pamja"
+
+#: ../src/gnome-screenshot.c:666
+#, fuzzy
+msgid "Remove the window border from the screenshot"
+msgstr "Përfshi kornizën e dritares tek pamja"
+
+#: ../src/gnome-screenshot.c:667
+msgid "Take screenshot after specified delay [in seconds]"
+msgstr "Merr pamjen e ekranit mbas një kohe të caktuar [në sekonda]"
+
+#. translators: this is the last part of the "grab after a
+#. * delay of <spin button> seconds".
+#.
+#: ../src/gnome-screenshot.c:667 ../src/screenshot-interactive-dialog.c:423
+msgid "seconds"
+msgstr ""
+
+#: ../src/gnome-screenshot.c:668
+#, fuzzy
+msgid "Effect to add to the border (shadow, border or none)"
+msgstr "Efekti që i duhet dhënë kornizës së dritares"
+
+#: ../src/gnome-screenshot.c:668
+#, fuzzy
+msgid "effect"
+msgstr "Efekti i kornizës"
+
+#: ../src/gnome-screenshot.c:669
+msgid "Interactively set options"
+msgstr ""
+
+#: ../src/gnome-screenshot.c:680
+#, fuzzy
+msgid "Take a picture of the screen"
+msgstr "Fotografo një dritare në vend të të gjithë ekranit"
+
+#: ../src/gnome-screenshot.desktop.in.h:1
+msgid "Save images of your desktop or individual windows"
+msgstr ""
+
+#: ../src/gnome-screenshot.desktop.in.h:2
+#, fuzzy
+msgid "Screenshot"
+msgstr "PamjaEkranit.png"
+
+#: ../src/gnome-screenshot.desktop.in.h:3
+#, fuzzy
+msgid "Take a screenshot of the current window"
+msgstr ""
+"E pamundur marrja e pamjes së ekranit për hapësirën e tanishme të punës."
+
+#: ../src/gnome-screenshot.desktop.in.h:4
+#, fuzzy
+msgid "Take a screenshot of the whole screen"
+msgstr ""
+"E pamundur marrja e pamjes së ekranit për hapësirën e tanishme të punës."
+
+#: ../src/gnome-screenshot.ui.h:1
+msgid "*"
+msgstr "*"
+
+#: ../src/gnome-screenshot.ui.h:2
+#, fuzzy
+msgid "C_opy to Clipboard"
+msgstr "Ngjit shënimet"
+
+#: ../src/gnome-screenshot.ui.h:3
+msgid "Save Screenshot"
+msgstr "Ruaj Pamjen e Ekranit"
+
+#: ../src/gnome-screenshot.ui.h:4
+msgid "Save in _folder:"
+msgstr "Ruaje tek _kartela:"
+
+#: ../src/gnome-screenshot.ui.h:5
+msgid "_Name:"
+msgstr "_Emri:"
+
+#: ../src/org.gnome.gnome-screenshot.gschema.xml.in.h:1
+msgid "Border Effect"
+msgstr "Efekti i kornizës"
+
+#: ../src/org.gnome.gnome-screenshot.gschema.xml.in.h:2
+#, fuzzy
+msgid ""
+"Effect to add to the outside of a border. Possible values are \"shadow\", "
+"\"none\", and \"border\"."
+msgstr ""
+"Efekti që i duhet dhënë anës së jashtme të kornizës. Vlerat e mundëshme janë "
+"\"shadow\", \"none\", dhe \"black-line\"."
+
+#: ../src/org.gnome.gnome-screenshot.gschema.xml.in.h:3
+msgid ""
+"Grab just the current window, rather than the whole desktop. This key has "
+"been deprecated and it is no longer in use."
+msgstr ""
+
+#: ../src/org.gnome.gnome-screenshot.gschema.xml.in.h:4
+msgid "Include Border"
+msgstr "Përfshi kornizën"
+
+#: ../src/org.gnome.gnome-screenshot.gschema.xml.in.h:5
+#, fuzzy
+msgid "Include ICC Profile"
+msgstr "Përfshi kornizën"
+
+#: ../src/org.gnome.gnome-screenshot.gschema.xml.in.h:6
+#, fuzzy
+msgid "Include Pointer"
+msgstr "Përfshi kornizën"
+
+#: ../src/org.gnome.gnome-screenshot.gschema.xml.in.h:7
+#, fuzzy
+msgid "Include the ICC profile of the target in the screenshot file"
+msgstr "Përfshi kornizën e dritares tek pamja"
+
+#: ../src/org.gnome.gnome-screenshot.gschema.xml.in.h:8
+#, fuzzy
+msgid "Include the pointer in the screenshot"
+msgstr "Përfshi kornizën e dritares tek pamja"
+
+#: ../src/org.gnome.gnome-screenshot.gschema.xml.in.h:9
+msgid "Include the window manager border along with the screenshot"
+msgstr "Përfshi dhe kornizën e organizuesit të dritareve tek pamja e ekranit"
+
+#: ../src/org.gnome.gnome-screenshot.gschema.xml.in.h:10
+#, fuzzy
+msgid "Screenshot delay"
+msgstr "PamjaEkranit.png"
+
+#: ../src/org.gnome.gnome-screenshot.gschema.xml.in.h:11
+#, fuzzy
+msgid "Screenshot directory"
+msgstr "Zgjidh një directory"
+
+#: ../src/org.gnome.gnome-screenshot.gschema.xml.in.h:12
+#, fuzzy
+msgid "The directory the last screenshot was saved in."
+msgstr "Directory ku u ruajt pamja e fundit e marrë"
+
+#: ../src/org.gnome.gnome-screenshot.gschema.xml.in.h:13
+msgid "The number of seconds to wait before taking the screenshot."
+msgstr ""
+
+#: ../src/org.gnome.gnome-screenshot.gschema.xml.in.h:14
+msgid "Window-specific screenshot (deprecated)"
+msgstr ""
+
+#: ../src/screenshot-config.c:78
+#, c-format
+msgid ""
+"Conflicting options: --window and --area should not be used at the same "
+"time.\n"
+msgstr ""
+
+#: ../src/screenshot-config.c:85
+#, c-format
+msgid ""
+"Conflicting options: --area and --delay should not be used at the same "
+"time.\n"
+msgstr ""
+
+#: ../src/screenshot-dialog.c:193
+#, fuzzy
+msgid ""
+"UI definition file for the screenshot program is missing.\n"
+"Please check your installation of gnome-utils"
+msgstr ""
+"File Glade për programin e pamjeve të ekranit mungon.\n"
+"Ju lutem kontrolloni korrektësinë e instalimit të gnome-panel"
+
+#: ../src/screenshot-dialog.c:214
+#, fuzzy
+msgid "Select a folder"
+msgstr "Zgjidh një directory"
+
+#: ../src/screenshot-dialog.c:323
+msgid "Screenshot.png"
+msgstr "PamjaEkranit.png"
+
+#. translators: this is the name of the file that gets made up
+#. * with the screenshot if the entire screen is taken
+#: ../src/screenshot-filename-builder.c:119
+#, fuzzy, c-format
+msgid "Screenshot at %s.png"
+msgstr "Pamja e Ekranit-%s.png"
+
+#. translators: this is the name of the file that gets
+#. * made up with the screenshot if the entire screen is
+#. * taken
+#: ../src/screenshot-filename-builder.c:126
+#, fuzzy, c-format
+msgid "Screenshot at %s - %d.png"
+msgstr "PamjaEkranit-%s-%d.png"
+
+#: ../src/screenshot-interactive-dialog.c:165
+msgid "None"
+msgstr ""
+
+#: ../src/screenshot-interactive-dialog.c:166
+msgid "Drop shadow"
+msgstr ""
+
+#: ../src/screenshot-interactive-dialog.c:167
+#, fuzzy
+msgid "Border"
+msgstr "Efekti i kornizës"
+
+#. * Include pointer *
+#: ../src/screenshot-interactive-dialog.c:271
+#, fuzzy
+msgid "Include _pointer"
+msgstr "Përfshi kornizën"
+
+#. * Include window border *
+#: ../src/screenshot-interactive-dialog.c:281
+#, fuzzy
+msgid "Include the window _border"
+msgstr "Përfshi kornizën e dritares tek pamja"
+
+#: ../src/screenshot-interactive-dialog.c:298
+msgid "Apply _effect:"
+msgstr ""
+
+#: ../src/screenshot-interactive-dialog.c:360
+msgid "Grab the whole _desktop"
+msgstr ""
+
+#: ../src/screenshot-interactive-dialog.c:374
+#, fuzzy
+msgid "Grab the current _window"
+msgstr "Printo shpjegimin aktual"
+
+#: ../src/screenshot-interactive-dialog.c:386
+#, fuzzy
+msgid "Select _area to grab"
+msgstr "Zgjidh një directory"
+
+#. translators: this is the first part of the "grab after a
+#. * delay of <spin button> seconds".
+#.
+#: ../src/screenshot-interactive-dialog.c:403
+msgid "Grab _after a delay of"
+msgstr ""
+
+#: ../src/screenshot-interactive-dialog.c:441
+#: ../src/screenshot-interactive-dialog.c:449
+#, fuzzy
+msgid "Take Screenshot"
+msgstr "Ruaj Pamjen e Ekranit"
+
+#: ../src/screenshot-interactive-dialog.c:450
+#, fuzzy
+msgid "Effects"
+msgstr "Efekti i kornizës"
+
+#: ../src/screenshot-interactive-dialog.c:455
+#, fuzzy
+msgid "Take _Screenshot"
+msgstr "Ruaj Pamjen e Ekranit"
+
+#: ../src/screenshot-utils.c:702
+#, fuzzy
+msgid "Error loading the help page"
+msgstr "Gabim gjatë ngarkimit të ndihmës"
