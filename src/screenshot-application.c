@@ -129,7 +129,7 @@ static void
 save_pixbuf_handle_error (ScreenshotApplication *self,
                           GError *error)
 {
-  if (in_desktop ("Unity") || screenshot_config->interactive)
+  if ((!in_desktop ("GNOME")) || screenshot_config->interactive)
     {
       ScreenshotDialog *dialog = self->priv->dialog;
 
@@ -474,7 +474,7 @@ build_filename_ready_cb (GObject *source,
 
   screenshot_play_sound_effect ("screen-capture", _("Screenshot taken"));
 
-  if (in_desktop ("Unity") || screenshot_config->interactive)
+  if ((!in_desktop ("GNOME")) || screenshot_config->interactive)
     {
       self->priv->dialog = screenshot_dialog_new (self->priv->screenshot,
                                                   self->priv->save_uri,
