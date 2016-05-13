@@ -442,6 +442,7 @@ screenshot_interactive_dialog_new (CaptureClickedCallback f, gpointer user_data)
 
   gtk_window_set_resizable (GTK_WINDOW (dialog), FALSE);
   gtk_window_set_position (GTK_WINDOW (dialog), GTK_WIN_POS_CENTER);
+  gtk_window_set_title(GTK_WINDOW (dialog), _("Take Screenshot"));
 
   gtk_container_set_border_width (GTK_CONTAINER (dialog), 5);
 

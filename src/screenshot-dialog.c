@@ -224,6 +224,7 @@ screenshot_dialog_new (GdkPixbuf              *screenshot,
   GtkWidget *grid, *button_box;
 
   gtk_window_set_titlebar (GTK_WINDOW (dialog->dialog), NULL);
+  gtk_window_set_title(GTK_WINDOW (dialog->dialog), _("Save Screenshot"));
 
   grid = GTK_WIDGET (gtk_builder_get_object (ui, "grid1"));
   button_box = gtk_button_box_new (GTK_ORIENTATION_HORIZONTAL);
