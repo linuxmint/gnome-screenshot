@@ -44,7 +44,7 @@
 #define FLASH_ANIMATION_RATE 120
 
 /* When to consider the flash finished so we can stop fading */
-#define FLASH_LOW_THRESHOLD 0.01
+#define FLASH_LOW_THRESHOLD 0.1
 
 G_DEFINE_TYPE (CheeseFlash, cheese_flash, G_TYPE_OBJECT);
 
