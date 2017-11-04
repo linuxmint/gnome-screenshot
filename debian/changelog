@@ -1,3 +1,13 @@
+gnome-screenshot (3.18.0-2linuxmint2) sylvia; urgency=medium
+
+  [ gogogogi ]
+  * Update hr.po
+
+  [ Clement Lefebvre ]
+  * Flash: Hide the flash window when opacity reaches 10%.
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sat, 04 Nov 2017 12:34:54 +0000
+
 gnome-screenshot (3.18.0-2linuxmint1) sarah; urgency=medium
 
   * Removed help button
