@@ -31,7 +31,7 @@
 #ifdef HAVE_X11_EXTENSIONS_SHAPE_H
 #include <X11/extensions/shape.h>
 #endif
-
+#include <X11/Xatom.h>
 #include "cheese-flash.h"
 #include "screenshot-application.h"
 #include "screenshot-config.h"
@@ -216,6 +216,67 @@ mask_monitors (GdkPixbuf *pixbuf, GdkWindow *root_window)
   cairo_region_destroy (invisible_region);
 }
 
+static gboolean
+get_gtk_frame_extents (GdkWindow *window,
+                       GtkBorder *extents)
+{
+  Display *xdisplay;
+  Window xwindow;
+  Atom returned_type;
+  int returned_format;
+  gulong n_items, bytes_after;
+  guchar *property;
+
+  returned_type = None;
+  returned_format = 0;
+  n_items = bytes_after = 0;
+
+  xwindow = GDK_WINDOW_XID (window);
+  xdisplay = GDK_DISPLAY_XDISPLAY (gdk_display_get_default ());
+
+  gdk_error_trap_push ();
+
+  if (XGetWindowProperty (xdisplay, xwindow,
+                          gdk_x11_get_xatom_by_name ("_GTK_FRAME_EXTENTS"),
+                          0, G_MAXLONG, False, XA_CARDINAL,
+                          &returned_type,
+                          &returned_format,
+                          &n_items,
+                          &bytes_after,
+                          &property) != Success || returned_type == None)
+    {
+      if (property)
+        {
+          XFree (property);
+        }
+
+      gdk_error_trap_pop_ignored ();
+
+      return FALSE;
+    }
+
+  if (gdk_error_trap_pop () != Success || returned_format != 32 || returned_type != XA_CARDINAL || n_items != 4)
+    {
+      if (property)
+        {
+          XFree (property);
+        }
+
+      return FALSE;
+    }
+
+  gulong *borders = (gulong *) property;
+
+  extents->left   = (int)borders[0];
+  extents->right  = (int)borders[1];
+  extents->top    = (int)borders[2];
+  extents->bottom = (int)borders[3];
+
+  XFree (property);
+
+  return TRUE;
+}
+
 static void
 screenshot_fallback_get_window_rect_coords (GdkWindow *window,
                                             gboolean include_border,
@@ -236,6 +297,16 @@ screenshot_fallback_get_window_rect_coords (GdkWindow *window,
       real_coordinates.height = gdk_window_get_height (window);
       
       gdk_window_get_origin (window, &real_coordinates.x, &real_coordinates.y);
+    }
+
+  GtkBorder extents;
+
+  if (get_gtk_frame_extents (window, &extents))
+    {
+      real_coordinates.x += extents.left;
+      real_coordinates.y += extents.top;
+      real_coordinates.width -= (extents.left + extents.right);
+      real_coordinates.height -= (extents.top + extents.bottom);
     }
 
   x_orig = real_coordinates.x;
@@ -471,6 +542,14 @@ screenshot_fallback_get_pixbuf (GdkRectangle *rectangle)
               rec_y = rectangles[i].y;
               rec_width = rectangles[i].width - (frame_offset.left + frame_offset.right);
               rec_height = rectangles[i].height - (frame_offset.top + frame_offset.bottom);
+
+              GtkBorder extents;
+
+              if (get_gtk_frame_extents (window, &extents))
+                {
+                  rec_width -= (extents.left + extents.right);
+                  rec_height -= (extents.top + extents.bottom);
+                }
 
               if (real_coords.x < 0)
                 {
