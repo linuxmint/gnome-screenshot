@@ -791,22 +791,3 @@ screenshot_show_dialog (GtkWindow   *parent,
   return response;
 }
 
-void
-screenshot_display_help (GtkWindow *parent)
-{
-  GError *error = NULL;
-
-  gtk_show_uri (gtk_window_get_screen (parent),
-		"help:gnome-help/screen-shot-record",
-		gtk_get_current_event_time (), &error);
-
-  if (error)
-    {
-      screenshot_show_dialog (parent, 
-                              GTK_MESSAGE_ERROR,
-                              GTK_BUTTONS_OK,
-                              _("Error loading the help page"), 
-                              error->message);
-      g_error_free (error);
-    }
-}

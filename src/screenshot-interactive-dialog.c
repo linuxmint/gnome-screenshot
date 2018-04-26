@@ -127,12 +127,6 @@ interactive_dialog_key_press_cb (GtkWidget *widget,
                                  GdkEventKey *event,
                                  gpointer user_data)
 {
-  if (event->keyval == GDK_KEY_F1)
-    {
-      screenshot_display_help (GTK_WINDOW (widget));
-      return TRUE;
-    }
-
   if (event->keyval == GDK_KEY_Escape)
     {
       gtk_widget_destroy (widget);
@@ -441,8 +435,6 @@ screenshot_interactive_dialog_new (CaptureClickedCallback f, gpointer user_data)
   GtkWidget *button_box;
   GtkWidget *button;
   GtkStyleContext *context;
-  gboolean shows_app_menu;
-  GtkSettings *settings;
   GtkSizeGroup *size_group;
   CaptureData *data;
 
@@ -463,20 +455,6 @@ screenshot_interactive_dialog_new (CaptureClickedCallback f, gpointer user_data)
 
   button_box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 18);
   gtk_container_add (GTK_CONTAINER (main_vbox), button_box);
-
-  /* add help as a dialog button if we're not showing the application menu */
-  settings = gtk_settings_get_for_screen (gtk_widget_get_screen (GTK_WIDGET (dialog)));
-  g_object_get (settings,
-                "gtk-shell-shows-app-menu", &shows_app_menu,
-                NULL);
-  if (!shows_app_menu)
-    {
-      button = gtk_button_new_with_mnemonic (_("_Help"));
-      g_signal_connect_swapped (button, "clicked", G_CALLBACK (screenshot_display_help), dialog);
-      gtk_container_add (GTK_CONTAINER (button_box),
-                         button);
-      gtk_button_box_set_child_secondary (GTK_BUTTON_BOX (button_box), button, TRUE);
-    }
 
   size_group = gtk_size_group_new (GTK_SIZE_GROUP_HORIZONTAL);
 
