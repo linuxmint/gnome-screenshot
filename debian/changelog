@@ -1,3 +1,22 @@
+gnome-screenshot (3.25.0-1linuxmint1) tara; urgency=medium
+
+  [ Clement Lefebvre ]
+  * Native source format
+
+  [ Michael Webster ]
+  * screenshot-utils.c: Account for GTK_FRAME_EXTENTS (used by (#9)
+
+  [ Clement Lefebvre ]
+  * Force interactive mode everywhere but in GNOME
+  * Only use GNOME's screenshot interface when running in GNOME
+  * Removed headerbars
+  * Flash: Hide the flash window when opacity reaches 10%.
+  * Remove menu
+  * Remove help
+  * Fixed window titles
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu, 26 Apr 2018 13:48:34 +0100
+
 gnome-screenshot (3.25.0-0ubuntu2) artful; urgency=medium
 
   * Modify update_unity_list.patch:
