@@ -20,7 +20,8 @@
  * USA
  */
 
-#include <config.h>
+#include "config.h"
+
 #include <gdk/gdkx.h>
 #include <gdk/gdkkeysyms.h>
 #include <fcntl.h>
@@ -129,7 +130,7 @@ static void
 save_pixbuf_handle_error (ScreenshotApplication *self,
                           GError *error)
 {
-  if ((!in_desktop ("GNOME")) || screenshot_config->interactive)
+  if (in_desktop ("Unity") || screenshot_config->interactive)
     {
       ScreenshotDialog *dialog = self->priv->dialog;
 
@@ -142,7 +143,7 @@ save_pixbuf_handle_error (ScreenshotApplication *self,
           gchar *folder_uri = g_path_get_basename (folder);
           gchar *folder_name = g_uri_unescape_string (folder_uri, NULL);
           gchar *file_name = screenshot_dialog_get_filename (dialog);
-          gchar *detail = g_strdup_printf (_("A file named \"%s\" already exists in \"%s\""),
+          gchar *detail = g_strdup_printf (_("A file named “%s” already exists in “%s”"),
                                            file_name, folder_name);
           gint response;
                                              
@@ -279,19 +280,6 @@ save_with_description (ScreenshotApplication *self,
                                    format, NULL,
                                    save_pixbuf_ready_cb, self,
                                    "tEXt::Software", "gnome-screenshot",
-                                   NULL);
-}
-
-static void
-save_with_profile (ScreenshotApplication *self,
-                   GFileOutputStream     *os,
-                   gchar                 *format)
-{
-  gdk_pixbuf_save_to_stream_async (self->priv->screenshot,
-                                   G_OUTPUT_STREAM (os),
-                                   format, NULL,
-                                   save_pixbuf_ready_cb, self,
-                                   "icc-profile", self->priv->icc_profile_base64,
                                    NULL);
 }
 
@@ -474,7 +462,7 @@ build_filename_ready_cb (GObject *source,
 
   screenshot_play_sound_effect ("screen-capture", _("Screenshot taken"));
 
-  if ((!in_desktop ("GNOME")) || screenshot_config->interactive)
+  if (in_desktop ("Unity") || screenshot_config->interactive)
     {
       self->priv->dialog = screenshot_dialog_new (self->priv->screenshot,
                                                   self->priv->save_uri,
@@ -740,6 +728,15 @@ action_quit (GSimpleAction *action,
 }
 
 static void
+action_help (GSimpleAction *action,
+             GVariant *parameter,
+             gpointer user_data)
+{
+  GList *windows = gtk_application_get_windows (GTK_APPLICATION (user_data));
+  screenshot_display_help (g_list_nth_data (windows, 0));
+}
+
+static void
 action_about (GSimpleAction *action,
               GVariant *parameter,
               gpointer user_data)
@@ -806,6 +803,7 @@ action_window_shot (GSimpleAction *action,
 
 static GActionEntry action_entries[] = {
   { "about", action_about, NULL, NULL, NULL },
+  { "help", action_help, NULL, NULL, NULL },
   { "quit", action_quit, NULL, NULL, NULL },
   { "screen-shot", action_screen_shot, NULL, NULL, NULL },
   { "window-shot", action_window_shot, NULL, NULL, NULL }
@@ -814,16 +812,27 @@ static GActionEntry action_entries[] = {
 static void
 screenshot_application_startup (GApplication *app)
 {
+  GMenuModel *menu;
+  GtkBuilder *builder;
   ScreenshotApplication *self = SCREENSHOT_APPLICATION (app);
 
   G_APPLICATION_CLASS (screenshot_application_parent_class)->startup (app);
 
   screenshot_load_config ();
 
+  g_set_application_name (_("Screenshot"));
   gtk_window_set_default_icon_name (SCREENSHOOTER_ICON);
 
   g_action_map_add_action_entries (G_ACTION_MAP (self), action_entries,
                                    G_N_ELEMENTS (action_entries), self);
+
+  builder = gtk_builder_new ();
+  gtk_builder_add_from_resource (builder, "/org/gnome/screenshot/screenshot-app-menu.ui", NULL);
+  menu = G_MENU_MODEL (gtk_builder_get_object (builder, "app-menu"));
+  gtk_application_set_app_menu (GTK_APPLICATION (app), menu);
+
+  g_object_unref (builder);
+  g_object_unref (menu);
 }
 
 static void

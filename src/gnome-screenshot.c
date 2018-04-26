@@ -24,7 +24,8 @@
 /* IF YOU WANT YOUR OWN FEATURE -- WRITE THE DAMN THING YOURSELF (-: */
 /* MAYBE I LIED... -jrb */
 
-#include <config.h>
+#include "config.h"
+
 #include <locale.h>
 
 #include <glib/gi18n.h>
@@ -39,7 +40,7 @@ main (int argc, char *argv[])
   ScreenshotApplication *app;
 
   setlocale (LC_ALL, "");
-  bindtextdomain (GETTEXT_PACKAGE, GNOMELOCALEDIR);
+  bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
   bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
   textdomain (GETTEXT_PACKAGE);
 

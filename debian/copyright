@@ -1,12 +1,12 @@
-Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: gnome-screenshot
-Source: http://ftp.gnome.org/pub/GNOME/sources/gnome-screenshot/
+Source: https://download.gnome.org/sources/gnome-screenshot/
 
 Files: *
 Copyright: 2008-2012 Cosimo Cecchi <cosimoc@gnome.org>
            2006 Emmanuele Bassi <ebassi@gnome.org>
            2001-2006 Jonathan Blandford <jrb@alum.mit.edu>
-License: GPL-2.0+
+License: GPL-2+
  This package is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
  the Free Software Foundation; either version 2 of the License, or

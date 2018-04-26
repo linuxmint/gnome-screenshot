@@ -17,14 +17,15 @@
  * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
  */
 
-#include <config.h>
-#include <string.h>
-#include <stdlib.h>
+#include "config.h"
 
 #include "screenshot-config.h"
 #include "screenshot-dialog.h"
+#include "screenshot-utils.h"
 #include <glib/gi18n.h>
 #include <gio/gio.h>
+#include <string.h>
+#include <stdlib.h>
 
 enum {
   TYPE_IMAGE_PNG,
@@ -43,6 +44,21 @@ on_preview_draw (GtkWidget      *drawing_area,
 {
   ScreenshotDialog *dialog = data;
   GtkStyleContext *context;
+  int width, height;
+
+  width = gtk_widget_get_allocated_width (drawing_area);
+  height = gtk_widget_get_allocated_height (drawing_area);
+
+  if (!dialog->preview_image ||
+      gdk_pixbuf_get_width (dialog->preview_image) != width ||
+      gdk_pixbuf_get_height (dialog->preview_image) != height)
+    {
+      g_clear_object (&dialog->preview_image);
+      dialog->preview_image = gdk_pixbuf_scale_simple (dialog->screenshot,
+                                                       width,
+                                                       height,
+                                                       GDK_INTERP_BILINEAR);
+    }
 
   context = gtk_widget_get_style_context (drawing_area);
   gtk_style_context_save (context);
@@ -80,22 +96,6 @@ on_preview_button_release_event (GtkWidget      *drawing_area,
 }
 
 static void
-on_preview_configure_event (GtkWidget         *drawing_area,
-			    GdkEventConfigure *event,
-			    gpointer           data)
-{
-  ScreenshotDialog *dialog = data;
-
-  if (dialog->preview_image)
-    g_object_unref (G_OBJECT (dialog->preview_image));
-
-  dialog->preview_image = gdk_pixbuf_scale_simple (dialog->screenshot,
-						   event->width,
-						   event->height,
-						   GDK_INTERP_BILINEAR);
-}
-
-static void
 drag_data_get (GtkWidget          *widget,
 	       GdkDragContext     *context,
 	       GtkSelectionData   *selection_data,
@@ -123,6 +123,12 @@ dialog_key_press_cb (GtkWidget *widget,
                      GdkEventKey *event,
                      gpointer user_data)
 {
+  if (event->keyval == GDK_KEY_F1)
+    {
+      screenshot_display_help (GTK_WINDOW (widget));
+      return TRUE;
+    }
+
   if (event->keyval == GDK_KEY_Escape)
     {
       gtk_widget_destroy (widget);
@@ -173,7 +179,6 @@ setup_drawing_area (ScreenshotDialog *dialog, GtkBuilder *ui)
   g_signal_connect (preview_darea, "draw", G_CALLBACK (on_preview_draw), dialog);
   g_signal_connect (preview_darea, "button_press_event", G_CALLBACK (on_preview_button_press_event), dialog);
   g_signal_connect (preview_darea, "button_release_event", G_CALLBACK (on_preview_button_release_event), dialog);
-  g_signal_connect (preview_darea, "configure_event", G_CALLBACK (on_preview_configure_event), dialog);
 
   /* setup dnd */
   gtk_drag_source_set (preview_darea,
@@ -221,31 +226,31 @@ screenshot_dialog_new (GdkPixbuf              *screenshot,
   g_assert (res != 0);
 
   dialog->dialog = GTK_WIDGET (gtk_builder_get_object (ui, "toplevel"));
+  if (in_desktop ("Unity"))
+    {
+      GtkWidget *grid, *button_box;
 
-  GtkWidget *grid, *button_box;
+      gtk_window_set_titlebar (GTK_WINDOW (dialog->dialog), NULL);
 
-  gtk_window_set_titlebar (GTK_WINDOW (dialog->dialog), NULL);
-  gtk_window_set_title(GTK_WINDOW (dialog->dialog), _("Save Screenshot"));
+      grid = GTK_WIDGET (gtk_builder_get_object (ui, "grid1"));
+      button_box = gtk_button_box_new (GTK_ORIENTATION_HORIZONTAL);
+      gtk_widget_show (button_box);
+      gtk_grid_attach (GTK_GRID (grid), button_box, 0, 2, 3, 1);
 
-  grid = GTK_WIDGET (gtk_builder_get_object (ui, "grid1"));
-  button_box = gtk_button_box_new (GTK_ORIENTATION_HORIZONTAL);
-  gtk_widget_show (button_box);
-  gtk_grid_attach (GTK_GRID (grid), button_box, 0, 2, 3, 1);
+      dialog->copy_button = gtk_button_new_with_mnemonic (_("C_opy to Clipboard"));
+      gtk_widget_show (dialog->copy_button);
+      gtk_container_add (GTK_CONTAINER (button_box), dialog->copy_button);
 
-  dialog->copy_button = gtk_button_new_with_mnemonic (_("C_opy to Clipboard"));
-  gtk_widget_show (dialog->copy_button);
-  gtk_container_add (GTK_CONTAINER (button_box), dialog->copy_button);
+      dialog->save_button = gtk_widget_new (GTK_TYPE_BUTTON,
+              "label", _("_Save"),
+              "use-underline", TRUE,
+              "can-default", TRUE,
+              NULL);
+      gtk_window_set_default (GTK_WINDOW (dialog->dialog), dialog->save_button);
 
-  dialog->save_button = gtk_widget_new (GTK_TYPE_BUTTON,
-          "label", _("_Save"),
-          "use-underline", TRUE,
-          "can-default", TRUE,
-          NULL);
-  gtk_window_set_default (GTK_WINDOW (dialog->dialog), dialog->save_button);
-
-  gtk_widget_show (dialog->save_button);
-  gtk_container_add (GTK_CONTAINER (button_box), dialog->save_button);
-
+      gtk_widget_show (dialog->save_button);
+      gtk_container_add (GTK_CONTAINER (button_box), dialog->save_button);
+    }
   gtk_window_set_application (GTK_WINDOW (dialog->dialog), GTK_APPLICATION (g_application_get_default ()));
   gtk_widget_realize (dialog->dialog);
   g_signal_connect (dialog->dialog, "key-press-event",

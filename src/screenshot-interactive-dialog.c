@@ -21,7 +21,8 @@
  * USA
  */
 
-#include <config.h>
+#include "config.h"
+
 #include <glib/gi18n.h>
 
 #include "screenshot-config.h"
@@ -126,6 +127,12 @@ interactive_dialog_key_press_cb (GtkWidget *widget,
                                  GdkEventKey *event,
                                  gpointer user_data)
 {
+  if (event->keyval == GDK_KEY_F1)
+    {
+      screenshot_display_help (GTK_WINDOW (widget));
+      return TRUE;
+    }
+
   if (event->keyval == GDK_KEY_Escape)
     {
       gtk_widget_destroy (widget);
@@ -141,12 +148,12 @@ typedef struct {
   const gchar *nick;
 } ScreenshotEffect;
 
-/* Translators:
- * these are the names of the effects available which will be
- * displayed inside a combo box in interactive mode for the user
- * to chooser.
- */
 static const ScreenshotEffect effects[] = {
+  /* Translators:
+   * these are the names of the effects available which will be
+   * displayed inside a combo box in interactive mode for the user
+   * to chooser.
+   */
   { SCREENSHOT_EFFECT_NONE, N_("None"), "none" },
   { SCREENSHOT_EFFECT_SHADOW, N_("Drop shadow"), "shadow" },
   { SCREENSHOT_EFFECT_BORDER, N_("Border"), "border" },
@@ -431,6 +438,7 @@ screenshot_interactive_dialog_new (CaptureClickedCallback f, gpointer user_data)
 {
   GtkWidget *dialog;
   GtkWidget *main_vbox;
+  GtkWidget *header_bar;
   GtkWidget *button_box;
   GtkWidget *button;
   GtkStyleContext *context;
@@ -441,9 +449,15 @@ screenshot_interactive_dialog_new (CaptureClickedCallback f, gpointer user_data)
 
   dialog = gtk_application_window_new (GTK_APPLICATION (g_application_get_default ()));
 
+  if (!in_desktop ("Unity")) {
+  header_bar = gtk_header_bar_new ();
+  gtk_window_set_titlebar (GTK_WINDOW (dialog), header_bar);
+  }
+  else
+    header_bar = NULL;
+
   gtk_window_set_resizable (GTK_WINDOW (dialog), FALSE);
   gtk_window_set_position (GTK_WINDOW (dialog), GTK_WIN_POS_CENTER);
-  gtk_window_set_title(GTK_WINDOW (dialog), _("Take Screenshot"));
 
   gtk_container_set_border_width (GTK_CONTAINER (dialog), 5);
 
@@ -455,7 +469,8 @@ screenshot_interactive_dialog_new (CaptureClickedCallback f, gpointer user_data)
   create_screenshot_frame (main_vbox, _("Take Screenshot"));
   create_effects_frame (main_vbox, _("Effects"));
 
-  button_box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 18);
+  button_box = gtk_button_box_new (GTK_ORIENTATION_HORIZONTAL);
+  gtk_button_box_set_layout (GTK_BUTTON_BOX (button_box), GTK_BUTTONBOX_END);
   gtk_container_add (GTK_CONTAINER (main_vbox), button_box);
 
   /* add help as a dialog button if we're not showing the application menu */
@@ -463,14 +478,16 @@ screenshot_interactive_dialog_new (CaptureClickedCallback f, gpointer user_data)
   g_object_get (settings,
                 "gtk-shell-shows-app-menu", &shows_app_menu,
                 NULL);
+  if (!shows_app_menu)
+    {
+      button = gtk_button_new_with_mnemonic (_("_Help"));
+      g_signal_connect_swapped (button, "clicked", G_CALLBACK (screenshot_display_help), dialog);
+      gtk_container_add (GTK_CONTAINER (button_box),
+                         button);
+      gtk_button_box_set_child_secondary (GTK_BUTTON_BOX (button_box), button, TRUE);
+    }
 
   size_group = gtk_size_group_new (GTK_SIZE_GROUP_HORIZONTAL);
-
-  button = gtk_button_new_with_mnemonic (_("_Cancel"));
-  gtk_widget_set_valign (button, GTK_ALIGN_CENTER);
-  gtk_size_group_add_widget (size_group, button);
-  gtk_container_add (GTK_CONTAINER (button_box), button);
-  g_signal_connect_swapped (button, "clicked", G_CALLBACK (gtk_widget_destroy), dialog);
 
   button = gtk_button_new_with_mnemonic (_("Take _Screenshot"));
   gtk_widget_set_valign (button, GTK_ALIGN_CENTER);
@@ -482,10 +499,24 @@ screenshot_interactive_dialog_new (CaptureClickedCallback f, gpointer user_data)
   data->user_data = user_data;
   g_signal_connect (button, "clicked", G_CALLBACK (capture_button_clicked_cb), data);
   gtk_size_group_add_widget (size_group, button);
-  gtk_container_add (GTK_CONTAINER (button_box), button);
+  if (header_bar)
+  gtk_header_bar_pack_end (GTK_HEADER_BAR (header_bar), button);
+  else
+    gtk_container_add (GTK_CONTAINER (button_box), button);
+
   gtk_widget_set_can_default (button, TRUE);
   gtk_widget_grab_default (button);
-  g_signal_connect (dialog, "key-press-event", G_CALLBACK (interactive_dialog_key_press_cb), NULL);
+  g_signal_connect (dialog, "key-press-event",
+                    G_CALLBACK (interactive_dialog_key_press_cb), 
+                    NULL);
+
+  button = gtk_button_new_with_mnemonic (_("_Cancel"));
+  gtk_widget_set_valign (button, GTK_ALIGN_CENTER);
+  gtk_size_group_add_widget (size_group, button);
+  if (header_bar)
+  gtk_header_bar_pack_start (GTK_HEADER_BAR (header_bar), button);
+  g_signal_connect_swapped (button, "clicked",
+                            G_CALLBACK (gtk_widget_destroy), dialog);
 
   g_object_unref (size_group);
 

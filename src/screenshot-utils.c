@@ -18,7 +18,8 @@
  * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
  */
 
-#include <config.h>
+#include "config.h"
+
 #include <gdk/gdkkeysyms.h>
 #include <gtk/gtk.h>
 #include <glib.h>
@@ -630,7 +631,7 @@ screenshot_get_pixbuf (GdkRectangle *rectangle)
                                      filename);
     }
 
-  if (!(in_desktop ("GNOME")))
+  if (in_desktop ("Unity"))
       screenshot = screenshot_fallback_get_pixbuf(rectangle);
   else {
   connection = g_application_get_dbus_connection (g_application_get_default ());
@@ -711,3 +712,22 @@ screenshot_show_dialog (GtkWindow   *parent,
   return response;
 }
 
+void
+screenshot_display_help (GtkWindow *parent)
+{
+  GError *error = NULL;
+
+  gtk_show_uri (gtk_window_get_screen (parent),
+		"help:gnome-help/screen-shot-record",
+		gtk_get_current_event_time (), &error);
+
+  if (error)
+    {
+      screenshot_show_dialog (parent, 
+                              GTK_MESSAGE_ERROR,
+                              GTK_BUTTONS_OK,
+                              _("Error loading the help page"), 
+                              error->message);
+      g_error_free (error);
+    }
+}

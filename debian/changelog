@@ -1,60 +1,60 @@
-gnome-screenshot (3.18.0-2linuxmint2) sylvia; urgency=medium
+gnome-screenshot (3.25.0-0ubuntu2) artful; urgency=medium
 
-  [ gogogogi ]
-  * Update hr.po
+  * Modify update_unity_list.patch:
+    - Disable the Current Window and Selected Area .desktop Actions
+      since they don't work in the default Ubuntu desktop (LP: #1720262)
 
-  [ Clement Lefebvre ]
-  * Flash: Hide the flash window when opacity reaches 10%.
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Thu, 12 Oct 2017 10:34:07 -0400
 
- -- Clement Lefebvre <root@linuxmint.com>  Sat, 04 Nov 2017 12:34:54 +0000
+gnome-screenshot (3.25.0-0ubuntu1) artful; urgency=medium
 
-gnome-screenshot (3.18.0-2linuxmint1) sarah; urgency=medium
+  * New upstream release.
+  * Build with meson
 
-  * Removed help button
-  * Removed menu
-  * Removed headerbars
-  * Force interactive mode everywhere but in GNOME
-  * Only use GNOME's screenshot interface when running in GNOME
-  * Fixed window titles
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Thu, 24 Aug 2017 11:29:28 -0400
 
- -- Clement Lefebvre <root@linuxmint.com>  Fri, 13 May 2016 16:44:49 +0100
+gnome-screenshot (3.22.0-1ubuntu2) artful; urgency=medium
 
-gnome-screenshot (3.18.0-1ubuntu2) xenial; urgency=medium
+  * Drop obsolete 01_use-ubuntu-help.patch:
+    - Ubuntu help now provides help:gnome-help
 
-  * 0002-Scale-images-by-the-scale-factor-in-use.patch: Drop - this patch was
-    wrong (created blurry images) and the issue has now been fixed directly in
-    gtk+3.0 3.16.7-0ubuntu5 instead.
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Wed, 26 Apr 2017 17:37:37 -0400
 
- -- Iain Lane <iain.lane@canonical.com>  Mon, 02 Nov 2015 18:04:23 +0000
+gnome-screenshot (3.22.0-1ubuntu1) yakkety; urgency=medium
 
-gnome-screenshot (3.18.0-1ubuntu1) xenial; urgency=medium
+  * Merge with Debian. Remaining Ubuntu changes:
+    - 0001-cheese-flash-Don-t-set-a-GdkVisual-it-makes-the-flas.patch:
+      + Fix flash breaking on GTK+ 3.16.
+    - 01_use-ubuntu-help.patch:
+      + Use Ubuntu help instead of GNOME help.
+    - unity.patch:
+      + When running in Unity don't use HeaderBar and don't use the GNOME shell
+        D-Bus interface.
+    - update_unity_list.patch:
+      + Add quicklist area-shot option.
 
-  * Merge with Debian, remaining Ubuntu changes:
-  * debian/patches/0001-cheese-flash-Don-t-set-a-GdkVisual-it-makes-the-flas.patch:
-    - Fix flash breaking on GTK+ 3.16.
-  * debian/patches/0002-Scale-images-by-the-scale-factor-in-use.patch:
-    - Fix working with HiDPI displays.
-  * debian/patches/01_use-ubuntu-help.patch:
-    - Use Ubuntu help instead of GNOME help.
-  * debian/patches/unity.patch:
-    - When running in Unity don't use HeaderBar and don't use the GNOME shell
-      D-Bus interface.
-  * debian/patches/update_unity_list.patch:
-    - Add quicklist area-shot option.
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Tue, 20 Sep 2016 18:35:10 -0400
 
- -- Robert Ancell <robert.ancell@canonical.com>  Thu, 29 Oct 2015 16:42:10 +1300
+gnome-screenshot (3.22.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump debhelper compat level to 10.
+
+ -- Michael Biebl <biebl@debian.org>  Tue, 20 Sep 2016 09:55:13 +0200
+
+gnome-screenshot (3.20.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump Standards-Version to 3.9.8.
+  * Convert from cdbs to dh.
+
+ -- Michael Biebl <biebl@debian.org>  Fri, 24 Jun 2016 01:52:20 +0200
 
 gnome-screenshot (3.18.0-1) unstable; urgency=medium
 
   * New upstream release.
 
  -- Andreas Henriksson <andreas@fatal.se>  Thu, 24 Sep 2015 11:18:07 +0200
-
-gnome-screenshot (3.18.0-0ubuntu1) xenial; urgency=medium
-
-  * New upstream release
-
- -- Robert Ancell <robert.ancell@canonical.com>  Tue, 27 Oct 2015 16:34:37 +1300
 
 gnome-screenshot (3.16.2-1) unstable; urgency=medium
 
@@ -64,52 +64,6 @@ gnome-screenshot (3.16.2-1) unstable; urgency=medium
   * Bump Standards-Version to 3.9.6.
 
  -- Michael Biebl <biebl@debian.org>  Sun, 24 May 2015 18:06:48 +0200
-
-gnome-screenshot (3.16.2-0ubuntu3) wily; urgency=medium
-
-  * debian/patches/unity.patch: Make the Unity "save" button the default
-    action, so you can hit enter on the save dialog.
-
- -- Iain Lane <iain.lane@canonical.com>  Tue, 28 Jul 2015 13:23:01 +0100
-
-gnome-screenshot (3.16.2-0ubuntu2) wily; urgency=medium
-
-  * debian/patches/0001-cheese-flash-Don-t-set-a-GdkVisual-it-makes-the-flas.patch:
-    Fix the flash not ever going away under GTK 3.16.
-  * debian/patches/0002-Scale-images-by-the-scale-factor-in-use.patch: Scale
-    the screenshot by the scaling factor.
-
- -- Iain Lane <iain.lane@canonical.com>  Mon, 08 Jun 2015 17:52:26 +0100
-
-gnome-screenshot (3.16.2-0ubuntu1) wily; urgency=medium
-
-  * New upstream release
-
- -- Robert Ancell <robert.ancell@canonical.com>  Tue, 02 Jun 2015 16:19:43 +1200
-
-gnome-screenshot (3.14.0-1ubuntu1) vivid; urgency=low
-
-  [ Artur Rona ]
-  * Merge from Debian unstable. (LP: #1338801)  Remaining changes:
-    - debian/patches/01_use-ubuntu-help.patch:
-      + Restore gnome-utils patch to use the Ubuntu help uri.
-    - debian/patches/update_unity_list.patch:
-      + Update to the current xdg format, tweak capitalization.
-      + List action to take screenshot of an area, 
-        thanks Christopher Kyle Horton.
-  * Drop following change, fixed upstream:
-    - debian/patches/uri.patch:
-      + Fix display of accented characters correctly.
-
-  [ Robert Ancell ]
-  * debian/patches/unity.patch
-    - On Unity sessions display a confirmation dialog after taking 
-      screenshots with the keybindings, the auto saving behaviour
-      is confusing our users.
-    - Don't show headerbars under Unity.
-    - Don't try to use the gnome-shell interface under Unity.
-
- -- Robert Ancell <robert.ancell@canonical.com>  Thu, 04 Dec 2014 15:01:05 +1300
 
 gnome-screenshot (3.14.0-1) unstable; urgency=medium
 
@@ -145,32 +99,6 @@ gnome-screenshot (3.11.90-1) experimental; urgency=medium
 
  -- Andreas Henriksson <andreas@fatal.se>  Wed, 19 Feb 2014 00:06:46 +0100
 
-gnome-screenshot (3.10.1-0ubuntu1) trusty; urgency=medium
-
-  * New upstream version
-
- -- Sebastien Bacher <seb128@ubuntu.com>  Thu, 16 Jan 2014 11:16:23 +0100
-
-gnome-screenshot (3.10.0-1ubuntu1) trusty; urgency=medium
-
-  * Merge from debian. Remaining changes:
-  * debian/patches/01_use-ubuntu-help.patch:
-    - restore gnome-utils patch to use the ubuntu help uri
-  * debian/patches/ubuntu_interactive_screenshots.patch:
-    - on Unity sessions display a confirmation dialog after taking 
-      screenshots with the keybindings, the auto saving behaviour is
-      confusing our users
-  * debian/patches/ubuntu_unity_no_gnomeshell.patch:
-    - don't try to use the gnome-shell interface under Unity
-  * debian/patches/update_unity_list.patch:
-    - update to the current xdg format, tweak capitalization
-    - list action to take screenshot of an area, 
-      thanks Christopher Kyle Horton
-  * debian/patches/uri.patch:
-    - fix display of accented characters correctly
-
- -- Jackson Doak <noskcaj@ubuntu.com>  Thu, 19 Dec 2013 11:25:38 +1100
-
 gnome-screenshot (3.10.0-1) unstable; urgency=low
 
   * New upstream release.
@@ -187,14 +115,6 @@ gnome-screenshot (3.8.3-1) unstable; urgency=low
 
  -- Michael Biebl <biebl@debian.org>  Thu, 29 Aug 2013 12:21:53 +0200
 
-gnome-screenshot (3.8.3-0ubuntu1) trusty; urgency=medium
-
-  * New upstream release:
-    - Fix app menu and WM close button not showing
-    - Update the man page
-
- -- Robert Ancell <robert.ancell@canonical.com>  Mon, 16 Dec 2013 10:52:02 +1300
-
 gnome-screenshot (3.8.2-1) unstable; urgency=low
 
   * Team upload.
@@ -205,83 +125,11 @@ gnome-screenshot (3.8.2-1) unstable; urgency=low
 
  -- Andreas Henriksson <andreas@fatal.se>  Fri, 24 May 2013 11:52:27 +0200
 
-gnome-screenshot (3.8.2-0ubuntu1) saucy; urgency=low
-
-  * New upstream version:
-    - Fix file name field in dialog not having focus initially (lp: #1169904)
-  * debian/control.in:
-    - updated glib requirement
-
- -- Sebastien Bacher <seb128@ubuntu.com>  Wed, 15 May 2013 12:01:25 +0200
-
-gnome-screenshot (3.6.1-0ubuntu2) raring; urgency=low
-
-  * debian/patches/uri.patch:
-    - fix display of accented characters correctly (lp: #1155583)
-
- -- Ritesh Khadgaray <ritesh@canonical.com>  Fri, 15 Mar 2013 17:08:12 +0530
-
-gnome-screenshot (3.6.1-0ubuntu1) raring; urgency=low
-
-  * New upstream release
-
- -- Robert Ancell <robert.ancell@canonical.com>  Tue, 13 Nov 2012 14:02:40 +1300
-
-gnome-screenshot (3.6.0-0ubuntu1) quantal; urgency=low
-
-  * New upstream stable release
-
- -- Robert Ancell <robert.ancell@canonical.com>  Tue, 25 Sep 2012 09:40:07 +1200
-
-gnome-screenshot (3.5.92-0ubuntu1) quantal; urgency=low
-
-  * New upstream bugfix release
-
- -- Robert Ancell <robert.ancell@canonical.com>  Tue, 18 Sep 2012 09:16:55 +1200
-
-gnome-screenshot (3.5.91-0ubuntu1) quantal; urgency=low
-
-  * New upstream bugfix release
-
- -- Robert Ancell <robert.ancell@canonical.com>  Wed, 05 Sep 2012 11:08:56 +1200
-
-gnome-screenshot (3.5.90-0ubuntu1) quantal; urgency=low
-
-  * New upstream version
-
- -- Sebastien Bacher <seb128@ubuntu.com>  Mon, 20 Aug 2012 17:29:01 +0200
-
-gnome-screenshot (3.5.4-0ubuntu1) quantal; urgency=low
-
-  * New upstream release
-
- -- Robert Ancell <robert.ancell@canonical.com>  Tue, 17 Jul 2012 10:36:13 +1200
-
-gnome-screenshot (3.5.2-0ubuntu1) quantal-proposed; urgency=low
-
-  * New upstream release (LP: #1008595)
-    - Add a --file commandline option
-    - Add an --include-pointer commandline option
-    - Don't warn if fallback X11 code path is hit
-    - Warn if --interactive is combined with --clipboard
-    - Rename "whole desktop" to "whole screen"
-    - Use GResource for UI files
-  * Refresh patches 
-  * debian/control: Increase minimum glib version in line with upstream 
-
- -- Iain Lane <iain.lane@canonical.com>  Mon, 04 Jun 2012 17:09:33 +0100
-
 gnome-screenshot (3.4.1-1) unstable; urgency=low
 
   * New upstream release.
 
  -- Michael Biebl <biebl@debian.org>  Tue, 17 Apr 2012 23:13:30 +0200
-
-gnome-screenshot (3.4.1-0ubuntu1) precise-proposed; urgency=low
-
-  * New upstream version
-
- -- Sebastien Bacher <seb128@ubuntu.com>  Mon, 16 Apr 2012 21:32:59 +0200
 
 gnome-screenshot (3.4.0-2) unstable; urgency=low
 
@@ -296,49 +144,11 @@ gnome-screenshot (3.4.0-1) experimental; urgency=low
 
  -- Michael Biebl <biebl@debian.org>  Tue, 27 Mar 2012 00:45:01 +0200
 
-gnome-screenshot (3.4.0-0ubuntu1) precise-proposed; urgency=low
-
-  * New upstream release:
-    - updated translations
-
- -- Didier Roche <didrocks@ubuntu.com>  Tue, 27 Mar 2012 11:03:10 +0200
-
 gnome-screenshot (3.3.92-1) experimental; urgency=low
 
   * New upstream development release.
 
  -- Michael Biebl <biebl@debian.org>  Tue, 20 Mar 2012 03:47:55 +0100
-
-gnome-screenshot (3.3.92-0ubuntu2) precise; urgency=low
-
-  * debian/patches/ubuntu_interactive_screenshots.patch:
-    - updated to handle file replacements as well (lp: #941202)
-
- -- Sebastien Bacher <seb128@ubuntu.com>  Fri, 23 Mar 2012 16:19:26 +0100
-
-gnome-screenshot (3.3.92-0ubuntu1) precise; urgency=low
-
-  * New upstream version
-
- -- Sebastien Bacher <seb128@ubuntu.com>  Mon, 19 Mar 2012 21:14:01 +0100
-
-gnome-screenshot (3.3.91-1ubuntu1) precise; urgency=low
-
-  * Rebase on Debian with remaining changes:
-  * debian/patches/01_use-ubuntu-help.patch:
-    - restore gnome-utils patch to use the ubuntu help uri
-  * debian/patches/ubuntu_interactive_screenshots.patch:
-    - on Unity sessions display a confirmation dialog after taking 
-      screenshots with the keybindings, the auto saving behaviour is
-      confusing our users (lp: #927952)
-  * debian/patches/ubuntu_unity_no_gnomeshell.patch:
-    - don't try to use the gnome-shell interface under Unity
-  * debian/patches/update_unity_list.patch:
-    - update to the current xdg format, tweak capitalization (lp: #953645)
-    - list action to take screenshot of an area, 
-      thanks Christopher Kyle Horton
-
- -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 13 Mar 2012 20:08:05 +0100
 
 gnome-screenshot (3.3.91-1) experimental; urgency=low
 

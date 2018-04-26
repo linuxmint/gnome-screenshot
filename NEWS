@@ -1,3 +1,31 @@
+GNOME Screenshot 3.25.0 - 29th May 2017
+=======================================
+
+- Port to the Meson build system
+- Drop intltool
+- Translation updates
+- Use Unicode in translatable strings (#774204)
+- Show the correct application name (#772006)
+- Improve translator comments (#782818)
+
+GNOME Screenshot 3.22.0 - 19th September 2016
+=============================================
+
+- Avoid resizing preview too much (#768087)
+- Translation updates
+
+GNOME Screenshot 3.20.1 - 21st June 2016
+========================================
+
+- Fix translations, broken by 3.20.0
+
+GNOME Screenshot 3.20.0 - 17th June 2016
+========================================
+
+- Build system improvements
+- Appdata updates
+- Translation updates
+
 GNOME Screenshot 3.18.0 - 22nd Sep 2015
 =======================================
 
