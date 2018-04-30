@@ -1,3 +1,10 @@
+gnome-screenshot (3.25.0-1linuxmint2) tara; urgency=medium
+
+  [ Robin ]
+  * Fix area selection in screenshot bug (#8)
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon, 30 Apr 2018 12:44:38 +0100
+
 gnome-screenshot (3.25.0-1linuxmint1) tara; urgency=medium
 
   [ Clement Lefebvre ]
