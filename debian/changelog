@@ -1,3 +1,10 @@
+gnome-screenshot (3.18.0+2linuxmint3) cindy; urgency=medium
+
+  [ Asier Iturralde Sarasola ]
+  * Fix the Basque translation of the name of the file that gets made up with the screenshot if the entire screen is taken (#7)
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon, 13 Aug 2018 12:15:28 +0200
+
 gnome-screenshot (3.18.0-2linuxmint2) sylvia; urgency=medium
 
   [ gogogogi ]
