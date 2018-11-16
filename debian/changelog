@@ -1,3 +1,10 @@
+gnome-screenshot (3.25.0-1linuxmint3) tessa; urgency=medium
+
+  [ Michael Webster ]
+  * screenshot-area-selection.c: (x11) Make more of an effort to gain a pointer (#10)
+
+ -- Clement Lefebvre <root@linuxmint.com>  Fri, 16 Nov 2018 10:04:24 +0000
+
 gnome-screenshot (3.25.0-1linuxmint2) tara; urgency=medium
 
   [ Robin ]
